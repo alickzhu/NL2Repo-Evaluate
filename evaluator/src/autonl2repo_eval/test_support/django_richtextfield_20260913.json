@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "repair_id": "django-richtextfield-test-support-20260913-v1",
+  "instance_id": "jaap3__django-richtextfield--t30--l196--c61ac7ae",
+  "parent_commit": "c61ac7aefbfa896af368c6e66de0fb0764074ce8",
+  "source_repository": "https://github.com/jaap3/django-richtextfield",
+  "license_spdx_id": "MIT",
+  "image_digest": "sha256:548162744042034312d4f3c490c2d9ed542f317abc756ef03a18b1bc0f677ca4",
+  "source_test_patch_sha256": "721def8eeebf6d0d063c4dbd0a77d3e50c2509d73586bdf6350a5cbf58594733",
+  "source_test_files": [
+    "README.rst",
+    "testproject/tests/__init__.py",
+    "testproject/tests/test_models.py",
+    "testproject/tests/test_sanitizer.py",
+    "testproject/tests/test_urls.py",
+    "testproject/tests/test_views.py",
+    "testproject/tests/test_widgets.py"
+  ],
+  "passed_ptp_sha256": "dedf08a7cf28af80d0db01323998d398c8e3bf2936ba115bf1a2b49258078bd7",
+  "files": [
+    {
+      "path": "testproject/__init__.py",
+      "mode": "100644",
+      "git_blob_oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    {
+      "path": "testproject/settings.py",
+      "mode": "100644",
+      "git_blob_oid": "19fec988fa243a83f31a4900d6cf3d358b083597",
+      "sha256": "739913e791f402bcc3282a2b69b68f5ad2fefcf1b2bf9acaec6e4edffef0f3dd",
+      "text": "import os\n\nBASE_DIR = os.path.dirname(os.path.dirname(__file__))\n\nSECRET_KEY = '--1oh7*5-1_rr%*34^&@e^b59(vgv=zm1wt(wm1ga=pfm73(9i'\n\nDEBUG = True\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'djrichtextfield',\n    'testproject.testapp',\n]\n\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\n\nROOT_URLCONF = 'testproject.urls'\n\nWSGI_APPLICATION = 'testproject.wsgi.application'\n\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),\n    }\n}\n\nDEFAULT_AUTO_FIELD = 'django.db.models.AutoField'\n\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',\n            ],\n        },\n    }\n]\n\nSTATIC_URL = '/static/'\n\n# Django Rich Text Field\nTINYMCE_CONFIG = {\n    'js': ['//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'],\n    'init_template': 'djrichtextfield/init/tinymce.js',\n    'settings': {\n        'menubar': False,\n        'plugins': 'link image table code',\n        'toolbar': 'formatselect | bold italic | removeformat |' ' link unlink image table | code',\n        'block_formats': 'Paragraph=p;Header 1=h1;Header 2=h2;Header 3=h3',\n        'width': 700,\n    },\n    'profiles': {\n        'mini': {\n            'toolbar': 'bold italic | removeformat',\n        },\n    },\n}\n\nCKEDITOR_CONFIG = {\n    'js': ['//cdn.ckeditor.com/4.14.0/standard/ckeditor.js'],\n    'init_template': 'djrichtextfield/init/ckeditor.js',\n    'settings': {\n        'toolbar': [\n            {'items': ['Format', '-', 'Bold', 'Italic', '-', 'RemoveFormat']},\n            {'items': ['Link', 'Unlink', 'Image', 'Table']},\n            {'items': ['Source']},\n        ],\n        'format_tags': 'p;h1;h2;h3',\n        'width': 700,\n    },\n    'profiles': {\n        'mini': {\n            'toolbar': [\n                {'items': ['Bold', 'Italic', '-', 'RemoveFormat']},\n            ]\n        }\n    },\n    'sanitizer': lambda value: 'foo' + value,\n    'sanitizer_profiles': {\n        'baz': lambda value: value + 'baz',\n    },\n}\n\nDJRICHTEXTFIELD_CONFIG = CKEDITOR_CONFIG\n"
+    },
+    {
+      "path": "testproject/testapp/__init__.py",
+      "mode": "100644",
+      "git_blob_oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    {
+      "path": "testproject/testapp/admin.py",
+      "mode": "100644",
+      "git_blob_oid": "26319bcf519e4e80636772e27c9ba7f554cd6539",
+      "sha256": "690b12dea12f9c6f371d6f5cf4e5c76676d2e322d05ba9aaf6968d676521396b",
+      "text": "from django.contrib import admin\n\nfrom testproject.testapp.forms import CommentForm\nfrom testproject.testapp.models import Comment, Post\n\n\nclass CommentInline(admin.StackedInline):\n    model = Comment\n    form = CommentForm\n    extra = 1\n\n\nclass PostAdmin(admin.ModelAdmin):\n    inlines = [CommentInline]\n\n\nadmin.site.register(Post, PostAdmin)\n"
+    },
+    {
+      "path": "testproject/testapp/forms.py",
+      "mode": "100644",
+      "git_blob_oid": "5ff4fbf33a16d3e36ff09492b0cae23e5c3cd929",
+      "sha256": "7495a557e2c58b6a94e6b938dae158c03179d778998683a9858d4ec0bc1e7b05",
+      "text": "from django import forms\n\nfrom djrichtextfield.widgets import RichTextWidget\n\nfrom .models import Comment\n\n\nclass CommentForm(forms.ModelForm):\n    content = forms.CharField(widget=RichTextWidget(field_settings='mini'))\n\n    class Meta:\n        model = Comment\n        exclude = ['post']\n"
+    },
+    {
+      "path": "testproject/testapp/models.py",
+      "mode": "100644",
+      "git_blob_oid": "8860ebc9bbae12c45b3c25ae88ccfb7bbb977986",
+      "sha256": "5ded8b525086913685c26721c60a637e9b7888fcf446c0047bcae873f27d3a1b",
+      "text": "from django.db import models\nfrom django.urls import reverse\n\nfrom djrichtextfield.models import RichTextField\n\n\nclass Post(models.Model):\n    title = models.CharField(max_length=50)\n    lead = RichTextField(field_settings='mini')\n    content = RichTextField()\n\n    def get_absolute_url(self):\n        return reverse('post_detail', kwargs={'pk': self.pk})\n\n    def get_add_comment_url(self):\n        return reverse('post_add_comment', kwargs={'pk': self.pk})\n\n    def __str__(self):\n        return self.title\n\n\nclass Comment(models.Model):\n    post = models.ForeignKey(Post, on_delete=models.CASCADE)\n    content = models.TextField()\n\n    def get_absolute_url(self):\n        return '{}#c{}'.format(reverse('post_detail', kwargs={'pk': self.post.pk}), self.pk)\n\n    def __str__(self):\n        return 'Comment on \"%s\"' % self.post.title\n"
+    },
+    {
+      "path": "testproject/testapp/templates/testapp/comment_form.html",
+      "mode": "100644",
+      "git_blob_oid": "f2b15a757a69a04184509e39f2d94956733bd521",
+      "sha256": "f2f427cf4f903c5f8d321fa562b22d1c7d159ac1e68c2673dbd8a7041c6835d2",
+      "text": "<!doctype html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Comment on {{ post.title }}</title>\n    {{ form.media }}\n  </head>\n  <body>\n    <article>\n      <h1>Comment on {{ post.title }}</h1>\n\n      <form method=\"post\">\n        <div>{% csrf_token %}</div>\n        {{ form.as_p }}\n\n        <p><input type=\"submit\" value=\"Comment\"></p>\n      </form>\n    </article>\n  </body>\n</html>\n"
+    },
+    {
+      "path": "testproject/testapp/templates/testapp/post_detail.html",
+      "mode": "100644",
+      "git_blob_oid": "d781bef35c2bd5bcec351aa819867d4a057bd10b",
+      "sha256": "9d0c5418a4243053d80bbf42d69ed55f392fc0ff58bd5c5235796e4484a2cddd",
+      "text": "<!doctype html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>{{ post.title }}</title>\n  </head>\n  <body>\n    <article>\n      <h1>{{ post.title }}</h1>\n\n      <div>{{ post.lead|safe }}</div>\n\n      <hr>\n\n      <div>{{ post.content|safe }}</div>\n    </article>\n\n    <aside>\n      <h2>Comments</h2>\n\n      <ul>\n      {% for comment in post.comment_set.all %}\n        <li id=\"c{{ comment.pk }}\">\n          {{ comment.content|safe }}\n        </li>\n      {% empty %}\n        <li>\n          <p>No comments yet</p>\n        </li>\n      {% endfor %}\n      </ul>\n\n      <p><a href=\"{{ post.get_add_comment_url }}\">Add a comment</a></p>\n    </aside>\n  </body>\n</html>\n"
+    },
+    {
+      "path": "testproject/testapp/views.py",
+      "mode": "100644",
+      "git_blob_oid": "719aa5ad42ee168a7542da6ccdcd411b1f408e0a",
+      "sha256": "de7f243949a89e0cee400cc25a59b89cdc8847361fbdc838ebddd7e59ac582a9",
+      "text": "from django.shortcuts import get_object_or_404\nfrom django.views.generic import UpdateView, DetailView\n\nfrom .forms import CommentForm\nfrom .models import Comment, Post\n\n\nclass PostDetail(DetailView):\n    model = Post\n\n\nclass CommentCreateView(UpdateView):\n    model = Comment\n    form_class = CommentForm\n\n    def get_object(self):\n        post = get_object_or_404(Post, pk=self.kwargs['pk'])\n        return Comment(post=post)\n"
+    },
+    {
+      "path": "testproject/urls.py",
+      "mode": "100644",
+      "git_blob_oid": "0c30a6978d9f11c3d14adc094cc5c0e0b5c6ee08",
+      "sha256": "00a05ecc0ac2c0a6c1537f2527d517053494b740dd459f3a5aaf7d53fa694917",
+      "text": "from django.urls import include, path\nfrom django.contrib import admin\n\nfrom .testapp.views import CommentCreateView, PostDetail\n\n\nadmin.autodiscover()\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('djrichtextfield/', include('djrichtextfield.urls')),\n    path('post/<int:pk>/', PostDetail.as_view(), name='post_detail'),\n    path('post/<int:pk>/comment/', CommentCreateView.as_view(), name='post_add_comment'),\n]\n"
+    },
+    {
+      "path": "testproject/wsgi.py",
+      "mode": "100644",
+      "git_blob_oid": "4ec96e85332d0507958a4213f6c214970e89217e",
+      "sha256": "9b233c57c0bd7cbff78237c11358e477652903decaf3ad9f4ae8878d16e7ab86",
+      "text": "\"\"\"\nWSGI config for testproject project.\n\nIt exposes the WSGI callable as a module-level variable named ``application``.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/\n\"\"\"\n\nimport os\n\nos.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"testproject.settings\")\n\nfrom django.core.wsgi import get_wsgi_application  # noqa: E402\n\napplication = get_wsgi_application()\n"
+    }
+  ],
+  "reason": "Restore omitted testproject infrastructure; no djrichtextfield implementation or frozen test assertion is changed."
+}

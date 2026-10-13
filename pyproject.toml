@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autonl2repo-local"
+version = "0.1.0"
+description = "Single-task local OpenHands rollout and AutoNL2Repo evaluation"
+requires-python = ">=3.12"
+dependencies = [
+  "docker>=7.1.0", "openhands-sdk==1.47.0", "openhands-tools==1.47.0",
+  "packaging>=24.2", "resolvelib>=1.2,<2", "transformers>=4.57,<5",
+  "unidiff>=0.7.5,<1", "autonl2repo-eval==0.3.2",
+]
+
+[project.scripts]
+autonl2repo = "openhands_research.cli:main"
+autonl2repo-docker = "openhands_research.benchmarks.score_runtime:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: real Docker or protocol integration tests"]
+

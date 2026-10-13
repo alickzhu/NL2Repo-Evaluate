@@ -1,0 +1,2878 @@
+{
+  "schema_version": 1,
+  "snapshot_date_utc": "2026-10-13",
+  "source_repository": "AutoNL2Repo-Eval",
+  "source_head": "68d80cedc46bedff131037fda1a1029b2c4a8b84",
+  "source_is_worktree_snapshot": true,
+  "source_note": "Copied from the local working tree, including pre-existing edits; HEAD alone is not the complete source identity. Per-file source hashes identify copied content. Source paths are provenance only, never runtime dependencies.",
+  "versions": {
+    "openhands-sdk": "1.47.0",
+    "openhands-tools": "1.47.0",
+    "autonl2repo-eval": "0.3.2"
+  },
+  "verification": {
+    "extracted_image_functions": "AST-identical to source (6 functions)",
+    "task_instruction": "Original benchmark instruction retained; controller-only Task ID/key prefix removed",
+    "vendor_and_evaluator": "all included source files byte-identical"
+  },
+  "omitted": [
+    "OpenPAI/cluster launchers",
+    "cloud uploads and credentials",
+    "batch collection/worker pools",
+    "monitor/serve commands",
+    "dataset rows except the bundled Deckhouse example; recorded runs",
+    "other benchmark adapters and old pinned scorer"
+  ],
+  "excluded_generated_files": [
+    ".venv",
+    "build",
+    "dist",
+    "*.egg-info",
+    "__pycache__",
+    ".pytest_cache",
+    "PROVENANCE.json (self)"
+  ],
+  "counts": {
+    "new_local_glue_or_documentation": 9,
+    "exact_copy": 445,
+    "reduced_or_packaging_only": 14,
+    "third_party_license": 1
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "0f74598f442dfebf55f5ed100fb076903707adaf848286abe5283bea4beb0e0f",
+      "status": "new_local_glue_or_documentation"
+    },
+    {
+      "path": "README.md",
+      "sha256": "7be2eb3f34665460fb3de9e1e8a692b79a624c83edcddcbdeb6ff243d4583835",
+      "status": "new_local_glue_or_documentation"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "44c5721f8c922998bb7ccfd4166d53194ef6c5c958a51dd0490af8689e8b53f0",
+      "status": "new_local_glue_or_documentation"
+    },
+    {
+      "path": "evaluator/pyproject.toml",
+      "sha256": "8c7d1311f9582bef093550304c254a4d94fff28e0f12ed6541f8deebab28dd95",
+      "source": "pyproject.toml",
+      "status": "exact_copy"
+    },
+    {
+      "path": "evaluator/src/autonl2repo_eval/__init__.py",
+      "sha256": "f2bd507899619f791c1a79b3042f2031e4c38666ead175f1595932d534d950b3",
+      "source": "src/autonl2repo_eval/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "evaluator/src/autonl2repo_eval/_canonical_runner.py",
+      "sha256": "888d91e000da65151eb0a93cfd06ec4ecf4fdc9ce6e5fef659204bab7d57597f",
+      "source": "src/autonl2repo_eval/_canonical_runner.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "evaluator/src/autonl2repo_eval/_submission.py",
+      "sha256": "31a88504f24c5abb5c07e0ffbc43308477c8ed45dc1d32d1786466120ea8b6ff",
+      "source": "src/autonl2repo_eval/_submission.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "evaluator/src/autonl2repo_eval/_test_support.py",
+      "sha256": "58ddba83b56c67b64926a3cacdf5e0a19e6d12621a85905f9f4ae29268a7699a",
+      "source": "src/autonl2repo_eval/_test_support.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "evaluator/src/autonl2repo_eval/_version.py",
+      "sha256": "2d57b436aeb848de86dac421dd89001cc8de22ee1d49f3fe25b72645a4252183",
+      "source": "src/autonl2repo_eval/_version.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "evaluator/src/autonl2repo_eval/evaluator.py",
+      "sha256": "4da4a4966b15ec7a0a9f491303d80ed73fcbac26b96c6fe1def87bb215ca2b58",
+      "source": "src/autonl2repo_eval/evaluator.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "evaluator/src/autonl2repo_eval/test_support/django_richtextfield_20260913.json",
+      "sha256": "bbef40dcbce2e68302def0a055d6657c6a13d87d95f299a9a605a33b68cfcc5c",
+      "source": "src/autonl2repo_eval/test_support/django_richtextfield_20260913.json",
+      "status": "exact_copy"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "397c1d4979c763ce9f3a0a719be8a85984c1b5675010ac160c424b16b93bf702",
+      "status": "new_local_glue_or_documentation"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "6d6441857dee002e5510b7c0a86905c1642703fa8b6bc7a8fa4ca0049ae6080e",
+      "source": "repogeneration/requirements.upstream.lock.txt",
+      "status": "exact_copy"
+    },
+    {
+      "path": "setup.sh",
+      "sha256": "b0bc750ec78d517f2d770439f8db9c911d2628948796b11ff55b206297ff77d0",
+      "status": "new_local_glue_or_documentation"
+    },
+    {
+      "path": "src/openhands_research/__init__.py",
+      "sha256": "b9c6528db591ea2a13ba02388d305912735347359416d278bafef2ccd0ff0520",
+      "source": "repogeneration/src/openhands_research/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/__main__.py",
+      "sha256": "19f07de3d1765a6803d4332ab1e67346381236f7769f47640e73849922394790",
+      "source": "repogeneration/src/openhands_research/__main__.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "change": "Local single-task packaging entry"
+    },
+    {
+      "path": "src/openhands_research/_checked_sse_client.py",
+      "sha256": "1080c3a5e6defb38f864e5bf35447ab723f867f1dfc0e95861c477d797c1e2ff",
+      "source": "repogeneration/src/openhands_research/_checked_sse_client.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/_sse_integrity.py",
+      "sha256": "aeae876e2b225e6ede0de48234e133c359dedb5c367a262e8e776ac5cc9fbceb",
+      "source": "repogeneration/src/openhands_research/_sse_integrity.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/benchmarks/__init__.py",
+      "sha256": "5edee6f96c15a66cc4fe0bb51cfe43421fa5c2670b222c0483801d6db788fa1c",
+      "source": "repogeneration/src/openhands_research/benchmarks/__init__.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "2e6f302cb01ef726f3224ccfae2f08e3a566b13b199b0fed71c373f4a1e9894c",
+      "change": "Select only AutoNL2Repo adapter."
+    },
+    {
+      "path": "src/openhands_research/benchmarks/autonl2repo_directory.py",
+      "sha256": "c681f2f1e5ef8f89ae58a28c340446fbb39267ccf47b7e7e2cdae365ed1d7278",
+      "source": "repogeneration/src/openhands_research/benchmarks/autonl2repo_directory.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "60c4e0cb70735501be2de6690dde989df43914924de7212e029642ec15683322",
+      "change": "Extract original validate_directory_submission verbatim; omit old pinned evaluator."
+    },
+    {
+      "path": "src/openhands_research/benchmarks/current_autonl2repo.py",
+      "sha256": "d5018f0c9cda71cc476b42ad7fb4d123fe8087fa3809c526961cc0bc902c10d9",
+      "source": "repogeneration/src/openhands_research/benchmarks/current_autonl2repo.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "bfbb7c1509486173df44e7a2474e5778d426d6a119ac393857c5f45c514b755e",
+      "change": "Use installed autonl2repo-docker console entry beside sys.executable; scoring logic unchanged."
+    },
+    {
+      "path": "src/openhands_research/benchmarks/score_runtime.py",
+      "sha256": "39947df0853c43ac2c466c233c15900dd1f78a2eb9d919fc0a705bb7c4ef7740",
+      "source": "repogeneration/src/openhands_research/benchmarks/score_runtime.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "089ad34a77542574e7da09d2bb23ffab1f36281d582051065b511873a9f99a6c",
+      "change": "Select Docker executable by environment and expose console main; same resource flags."
+    },
+    {
+      "path": "src/openhands_research/benchmarks/work.py",
+      "sha256": "c3770a574739d25d7ebf091a05e6a6d5b7c8f1c2eecd9296f22235825ee3df36",
+      "source": "repogeneration/src/openhands_research/benchmarks/autonl2repo.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "0fa078a1681d38de881583a66942ae789d52a9fae4fe8dc6decb80833a082fb8",
+      "change": "Extract original AutoNL2RepoAdapter.prepare_work verbatim; omit pinned legacy scorer."
+    },
+    {
+      "path": "src/openhands_research/blocklist.py",
+      "sha256": "5caa9c076a5e86f1979456b55637849dac7bd46fdd5a568897e59376a0f3d196",
+      "source": "openhand/blocklist.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/cli.py",
+      "sha256": "15f9c10f5f260b0b7ed7eabce7a8247c5b11b209078de5cced749da615d2f75f",
+      "source": "repogeneration/src/openhands_research/cli.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "7a808d077258195fdc49fa8b177252189dab056f00d81064802755568952f96b",
+      "change": "New minimal single-task CLI wiring copied runner/evaluator; no batch launcher."
+    },
+    {
+      "path": "src/openhands_research/contracts.py",
+      "sha256": "da3aaf7f73627e53fe0e52e923a0d60cba00df363679cd3658aef9ba9dff94ba",
+      "source": "repogeneration/src/openhands_research/contracts.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/dependencies.py",
+      "sha256": "b24857305145baff8c0eb4c1521c31f32f5890e44ec11d970e1ea3ca96e7cd61",
+      "source": "repogeneration/src/openhands_research/dependencies.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/grading.py",
+      "sha256": "4172f7679b032a3708c1e40b9bb725d854c3365297e0f9f929c6b85a71ab34d0",
+      "source": "repogeneration/src/openhands_research/grading.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/ledger.py",
+      "sha256": "7441fd153d91f2c8d76396e4551833ba74166d96657157c06d5617f8c88cd32a",
+      "source": "repogeneration/src/openhands_research/ledger.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/legacy_security.py",
+      "sha256": "10335e3985e002eed1270eebd9d2658fc56c6a6605036afbdade6aa5617baec3",
+      "source": "repogeneration/src/openhands_research/legacy_security.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "c427b8d10974b1dceea33db9986620d93ffaf89d17ce72c8d6b133399085b736",
+      "change": "Resolve the copied blocklist beside this module instead of the parent checkout."
+    },
+    {
+      "path": "src/openhands_research/length_retry.py",
+      "sha256": "dab0964ee7ced33c0a3e729ee6aadf24d7efb03bbc1a7986eee65ac5fd8617dd",
+      "source": "repogeneration/src/openhands_research/length_retry.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/local.py",
+      "sha256": "ac3f26fbe7d9e569d3c1d42369c8a03ea1fb63167944b68ea2ca59b6ca8f73c3",
+      "status": "new_local_glue_or_documentation",
+      "change": "New sequential preparation -> original run(defer_grading=True) -> original grade_generated glue."
+    },
+    {
+      "path": "src/openhands_research/model_profile.py",
+      "sha256": "b3690f5eae744cd41ecf88c1433c28b1c4518d969e7c2feb282ef29ff7e43f8f",
+      "source": "repogeneration/src/openhands_research/model_profile.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/preparation.py",
+      "sha256": "d9eef5327d842964ac75e0146429c5dc8dadb34347022deb3ba026af9a27f7d9",
+      "source": "repogeneration/src/openhands_research/preparation.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "bff63f201295f5651da28055608ad22982b6bc0943a1e9145e612aa47551f73a",
+      "change": "Extract unchanged image preparation functions; omit batch/offline environment machinery."
+    },
+    {
+      "path": "src/openhands_research/prepared_dependencies.py",
+      "sha256": "e1586c8628da1be2c7128470d0a359842f8dde4f5fe1cb570e759dd263c69727",
+      "source": "repogeneration/src/openhands_research/prepared_dependencies.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/qwen_sft.py",
+      "sha256": "b45af82238de3ad83091401e2152e02566fb45fea3dae1a9ef20601c9819e231",
+      "source": "repogeneration/src/openhands_research/qwen_sft.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/responses_records.py",
+      "sha256": "535e6d97eaa9af7996c0845a3c6709e05ca5c03adb21f42b1514346615614985",
+      "source": "repogeneration/src/openhands_research/responses_records.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/runner.py",
+      "sha256": "7d20c0443004963c6392c2afc84bd5dd5f21127c57ae72acce097ebcda618e50",
+      "source": "repogeneration/src/openhands_research/runner.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "c4207975c4be8818666e16842501cf7faa63732338942b3e82b5e56cb343d399",
+      "change": "Remove non-AutoNL2Repo routes and legacy inline grading; enforce current contract and existing blocklist. Keep original Agent/run/capture/deferred grading."
+    },
+    {
+      "path": "src/openhands_research/runtime.py",
+      "sha256": "d89d7bbc7c3bfc9e3a7127c5b3fd934951cbdbf33bb6869ee76c08f4fcf7ec2e",
+      "source": "repogeneration/src/openhands_research/runtime.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/sft_transport.py",
+      "sha256": "8cf87a4737de1539b2310094f6ef9b46f78e817e65ab4a51de55017fec2ed976",
+      "source": "repogeneration/src/openhands_research/sft_transport.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/task_prompt.py",
+      "sha256": "b48371f077ff9d0aff3481b18329f2838ae1c8a97fe0d3a45196be68b2962dfa",
+      "source": "repogeneration/src/openhands_research/task_prompt.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "3d91fccd73e1fec0cf0563e7b1b5089a08b975de98aa4d90bd90f05b623b04bc",
+      "change": "Remove DeNovo branch; AutoNL2Repo prompt text unchanged.",
+      "note": "Removed controller-only task identifiers from initial agent message; instruction otherwise unchanged."
+    },
+    {
+      "path": "src/openhands_research/task_runtime.py",
+      "sha256": "8053f616f42cd3a4ab171ec2daa79ba148f0d3f158bbc716df82ca52a7d290c9",
+      "source": "repogeneration/src/openhands_research/task_runtime.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/tools.py",
+      "sha256": "33aec109f5437ff5678f65e0995f63c73d71c20c2230e628d5cdfa168027ce76",
+      "source": "repogeneration/src/openhands_research/tools.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "src/openhands_research/trajectories.py",
+      "sha256": "1b0f1210a3f51a41745fd4f374cbc1752d8142b2131e7568b16b418a050fab4b",
+      "source": "repogeneration/src/openhands_research/trajectories.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/evaluator/test_evaluator.py",
+      "sha256": "28bc4ba5e859420f3136c7c1ab2af95ff540559636571690c6acc8c7cdee9c3d",
+      "source": "tests/test_evaluator.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/evaluator/test_published_commands.py",
+      "sha256": "b6a9c4d09dfafedac738e6dee77c9a9994e7adc2755c44a65af406c3da342c3e",
+      "source": "tests/test_published_commands.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/evaluator/test_submission.py",
+      "sha256": "57327db3570671ad12cd9eeaa661fd9bd0279d9ed2607e095b392389e65d461d",
+      "source": "tests/test_submission.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/test_conversation_streaming.py",
+      "sha256": "02054686b4b0375ddd84e63dfd0a656da5b1285474a5c086779ee0822b7ce0b8",
+      "source": "repogeneration/tests/test_conversation_streaming.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/test_current_autonl2repo.py",
+      "sha256": "232d45d58950ae80e8e2faaf92d7fba52d400fc6c7f2410a1d7594fcb0b9d4a1",
+      "source": "repogeneration/tests/test_current_autonl2repo.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "ef356948e60892e1b635b4eeaec662cac77bdda8c982a0d35b0d88f2772f458d",
+      "change": "Keep original current row/directory scoring tests; omit collection/config tests."
+    },
+    {
+      "path": "tests/test_ledger.py",
+      "sha256": "cf3e006f1274dde2bef21a71d61d9c7e856cfb02e71e947e8ee1d9ea0a9486a9",
+      "source": "repogeneration/tests/test_ledger.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/test_legacy_security.py",
+      "sha256": "e4ffa7836240716ff5e983f7ba2cfcde70509c65b18bfa0a0733fff2fef8813a",
+      "source": "repogeneration/tests/test_legacy_security.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "290ecc7697c7f69c197a401f36df1ddfee9cb796a8188e0a447173bc0160a759",
+      "change": "Keep original blocklist/security tests; omit batch config/launch tests."
+    },
+    {
+      "path": "tests/test_length_retry.py",
+      "sha256": "f2be7d4465c48d4ab195c5c1fe5bd730bbb0a580227ddc8ca71024c787d7bc60",
+      "source": "repogeneration/tests/test_length_retry.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/test_local.py",
+      "sha256": "72c0cc9cc2d05d9b5c036defdb47427538ec038d766bb51c4335a1dc42094d04",
+      "status": "new_local_glue_or_documentation"
+    },
+    {
+      "path": "tests/test_local_docker.py",
+      "sha256": "21933a6801a8cf3216529e5549caf59063ed7885b6c2ee97e8c5aefbee4e0365",
+      "status": "new_local_glue_or_documentation"
+    },
+    {
+      "path": "tests/test_model_profile.py",
+      "sha256": "9c23fe6ad8a129473ed6bcedaea4e6c7209ba670c33d466eb31495e7cf16fb1d",
+      "source": "repogeneration/tests/test_model_profile.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/test_request_retry.py",
+      "sha256": "f26f63091212dd64aea206e14eb3fa3853a3b4a8ae6fffd2e953b4d4e3296461",
+      "source": "repogeneration/tests/test_request_retry.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/test_responses_profile.py",
+      "sha256": "8bc1752067a2408db77c0fee1a70922d0b867f94df7a882c554b9238824c1c4c",
+      "source": "repogeneration/tests/test_responses_profile.py",
+      "status": "reduced_or_packaging_only",
+      "source_sha256": "80acea60f2b025d5ecd0c9079947e0b0132dfc4f19382fce240469f2b2210334",
+      "change": "Remove two monitor-only assertions and import; keep protocol tests."
+    },
+    {
+      "path": "tests/test_sft_transport.py",
+      "sha256": "2e506d3646d4e18d27be257685d8e5dadb43fc128baefc42c8390f51194f01c3",
+      "source": "repogeneration/tests/test_sft_transport.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/test_tools.py",
+      "sha256": "caf050cd8fbd5e097f8c3fe30d1e098e5e4e523932196c7bf460fd8837c8c7c6",
+      "source": "repogeneration/tests/test_tools.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "tests/test_trajectories.py",
+      "sha256": "03913c40b14df7103b3955c2ced16cfee9e956424190eadc8516ed8aea3eaf41",
+      "source": "repogeneration/tests/test_trajectories.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "sha256": "14a9b631c658eee682c6c2973525fbdf808c3457176bc47513052c559cc5ce86",
+      "source": "repogeneration/vendor/LICENSE",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/__init__.py",
+      "sha256": "edb1791bf7a3bf182fa0fd045fb8ec8502c4290a53f2b05fa17fe666cbb62c29",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/__init__.py",
+      "sha256": "f9627b3d4ec5b637402249e68864024f3b38082799605be36a27a999e23a8b77",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/acp_agent.py",
+      "sha256": "0b27cf1cf094d31b427d38ab65245cc3d1bb4ce4a504bcf82e9d0acee9e8999b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/acp_agent.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/acp_file_credentials.py",
+      "sha256": "f4ec3e25debfacb79e0038c53c7e2d689cea6c6542c9c416eca7e36fe0b23a03",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/acp_file_credentials.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/acp_models.py",
+      "sha256": "1b450f96fa9706c18f33de9ebf671ce0eb0a035946c08f4b87e51f86b779db4e",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/acp_models.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/acp_tracing.py",
+      "sha256": "3a7a74f3e440f1bc82ddb59ad427407d3d90ddcd776c990998b599eb3a7f39dd",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/acp_tracing.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/agent.py",
+      "sha256": "ee1b3e9c3552345599b480f6a2e0d539755b9c9f2321262f9f3464002080f1ca",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/agent.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/base.py",
+      "sha256": "667b23ed8cf284b4d8585b9bc919f70b81b58d7b1210331374675c75fd02e4a4",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/critic_mixin.py",
+      "sha256": "d70de96971c3cb037b7ee40a7a4576afb652b4009cd48173f38e0f1f7ce02c0f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/critic_mixin.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/parallel_executor.py",
+      "sha256": "a2ce8ebc42009a660c0eda2330958d0df1eb452b7b9f24da02f7c23f5f3038bb",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/parallel_executor.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/response_dispatch.py",
+      "sha256": "6545ac97df0731be6462d78e4611cae1f769b754f379efc6b6ffe7586cf45212",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/response_dispatch.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/stream_context.py",
+      "sha256": "af21dbb6e2987309503488b4da4a2264e6347039fab3ee535ccfccbdaa037ae2",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/stream_context.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/agent/utils.py",
+      "sha256": "ab376187fe8314ad90079c0237c623ee4f51bbb1bb24939a78b4a788d4278da5",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/agent/utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/banner.py",
+      "sha256": "c44261ce6a303a3a1e507b8104ac42f497b2caa5d5904cd3a8e1aaf23d646a27",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/banner.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/README.md",
+      "sha256": "fcd9be378ea6cdd21aef4d9175387556380d1eb6ae0011c4d28bbbf7f0a355cc",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/README.md",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/__init__.py",
+      "sha256": "2c5aa54638915982868e7d775aaacf004bda72b3055875377ac1c21b12761ffb",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/agent_context.py",
+      "sha256": "f928a2195fd1a3e99148350b2e4ed77f0e847d6950cf28b27765d6cdc0b01ae8",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/agent_context.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/condenser/README.md",
+      "sha256": "66d1f0f6002f82ac610d478880b2c3f49215a062955aff4a2777f2698a4c21ff",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/condenser/README.md",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/condenser/__init__.py",
+      "sha256": "bef82cc40feefce68ce6e413bcefc6cb2b8e0c426393e4ff9860c81f80ee589c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/condenser/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/condenser/base.py",
+      "sha256": "26ecce4b6c42de204396ec38cc94fb032adc6b20180b1d8315f09c1a78bca6a0",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/condenser/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/condenser/llm_summarizing_condenser.py",
+      "sha256": "7546d9b67998ada3167e8fabb145e82938f698bfda6a60e38455d4026739260f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/condenser/llm_summarizing_condenser.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/condenser/no_op_condenser.py",
+      "sha256": "4fcedb4ed270e1daa538865967847f2453d7792ca60ea95bb19b47ea783b3751",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/condenser/no_op_condenser.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/condenser/pipeline_condenser.py",
+      "sha256": "46a94fb2cc4ebc2bf906a89812c0fb94a1ce5a381ef230e5b62c2dd8fe004552",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/condenser/pipeline_condenser.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/condenser/prompts/summarizing_prompt.j2",
+      "sha256": "88cfcc443636ee2df8aa267417a22c0f1c9e3caa73c4edce10fe4ad6b03dd3f3",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/condenser/prompts/summarizing_prompt.j2",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/condenser/utils.py",
+      "sha256": "b5a4b232710cf62c613118d4a24901f4459b048eb47c7d520795cd264521d583",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/condenser/utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/memory.py",
+      "sha256": "a6689139d83713560d67b075cc74ee59bff6da3201cf026d93fe610e227fa4cf",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/memory.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/__init__.py",
+      "sha256": "72d7d238d9d5889fe04af95cbea886afe34de080915d5e361ef27a385ef4b270",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/presets.py",
+      "sha256": "ed3539b563863f13f0bdacccc5a6ce9aefa1ea6df60415d5fefe273c6d995ce2",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/presets.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/prompt.py",
+      "sha256": "8411f63ef8095c4827851d77d3c7c8f9943fe99bea105af8cca7a4957b87f4a4",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/prompt.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/registry.py",
+      "sha256": "b9b21d22a6993804b572acbfcb0672f8b85d8c2c05b9a5c45461fdc360a2f70d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/registry.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/section.py",
+      "sha256": "9c1846172e10bca5edfa32bc87beb26980ab1204be108b76f64a6871f7afb6e4",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/section.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/sections/__init__.py",
+      "sha256": "0318fb3c75af18fcfa0f867e86981f5649ce55d5cef4ce55542f86e23e8fc374",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/sections/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/sections/dynamic.py",
+      "sha256": "ae06b7f20e18dc20bdfcdfc34b695adbfeb8d750c3483025833146962a22fad2",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/sections/dynamic.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/sections/planning.py",
+      "sha256": "2a00ce3b1ca89a8d91eb15ea25ce030e0d8ac2312fb1d18b7e5970041dfd1793",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/sections/planning.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/sections/static.py",
+      "sha256": "c05dcec76c0f5a327c0b48c56c72ffc5ba1b74ff558168230bd961a225ccfd9b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/sections/static.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/templates/ask_agent_template.j2",
+      "sha256": "551296745d954c9fd3cb06b2fd67b1a7cfca94d80090c13de1e65e95b6ec1192",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/templates/ask_agent_template.j2",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/prompts/templates/skill_knowledge_info.j2",
+      "sha256": "6e8a84b0022ccc9d82cbb65ced47c52dbc125e01726d9e2653c602096fb35d87",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/prompts/templates/skill_knowledge_info.j2",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/view/__init__.py",
+      "sha256": "3a653501391ecd9644efaa9c2b16554f66d695618ef4e6fc0bd1cbe1bcc4f430",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/view/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/view/manipulation_indices.py",
+      "sha256": "4f51b63452d5c59f6704bfd937bf4bc9ee8a67576e6730667937a7da8e33ce41",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/view/manipulation_indices.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/view/properties/__init__.py",
+      "sha256": "6d6cfbdb46f4f6731e0d3314240a1d1984a539bc9239e37a1b3285668fd6e5ce",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/view/properties/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/view/properties/base.py",
+      "sha256": "b50db10a27634942a85994e044833c85846bff6ba70a8c4d3518e1b64a8ff693",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/view/properties/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/view/properties/batch_atomicity.py",
+      "sha256": "dae3c1975597ca838afad550955ca6a03b6c34287a064ffdd6a71928cc690f32",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/view/properties/batch_atomicity.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/view/properties/observation_uniqueness.py",
+      "sha256": "749247266839b6bb5f1238ebff5886f30e86da2a4a9e68eeab02f6bbcdef74e4",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/view/properties/observation_uniqueness.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/view/properties/tool_call_matching.py",
+      "sha256": "e6f17dde84f653f338aa020be92225593f96073ea90475c1311362a7507c7524",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/view/properties/tool_call_matching.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/view/properties/tool_loop_atomicity.py",
+      "sha256": "ba95591837c194a69d3f2deefb72a115095e472bc17907c53f7174e387a0c775",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/view/properties/tool_loop_atomicity.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/context/view/view.py",
+      "sha256": "3d31709f284b40e41bf1d12ef53d34662339757902ce06df3765be272531b45f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/context/view/view.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/__init__.py",
+      "sha256": "23f26dda725a80f9685872c42465daae506ec24c48924e35743a53315781bc7d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/base.py",
+      "sha256": "a26deb6f61c0419b329608ac298bcef326748b441191b6ff40d2e3b29ed6bca8",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/cancellation.py",
+      "sha256": "67cd4a054dd0cfbc1c488bf24625a877a2dc1263e4beff986bcf3af1f760f49f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/cancellation.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/conversation.py",
+      "sha256": "7fb48719db9006bb8ac4144fafdf6f036085d2eeaa7a09b70ce2c859dd4b8122",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/conversation.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/conversation_stats.py",
+      "sha256": "66543df64806e58542ad9e2ba8996aeb725a8889f15fc8eabfeab9952ed137af",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/conversation_stats.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/event_store.py",
+      "sha256": "af721391c46a1979c45e0e414c45a82dfc42d8a92d62ac2ccea0242f725450b0",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/event_store.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/events_list_base.py",
+      "sha256": "9488af45e2bac0e912e059350c59a46b54f68393e87a68836ab8e5693838d8ab",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/events_list_base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/exceptions.py",
+      "sha256": "ae9abc1ee96bd81e93dc0ba8d2756e630bea9b09b769da55961160369e84a792",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/exceptions.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/fifo_lock.py",
+      "sha256": "e83fb2790b6ef40b4c4f791b5fbc88938fe24fe74ecb2dca20fc4dd3e5afcfe8",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/fifo_lock.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/goal/__init__.py",
+      "sha256": "46b3e3c8da090f80a57b8455f51cde4e8a55c2312d6c57bc71545d1c11bb921a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/goal/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/goal/controller.py",
+      "sha256": "7a762429be862a9ada8ebc194ed191c4bf2ca0fcf9794e05ed8d92e4709519fe",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/goal/controller.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/goal/judge.py",
+      "sha256": "fbe0213e653550aeb3ed525bade7d14e0dbadb1b620ab594364d1d750e588877",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/goal/judge.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/goal/prompts.py",
+      "sha256": "c5bdb8fa4688fbd3e014c20ac0e0c877f6c66019363bff6069bc94db41b96c52",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/goal/prompts.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/goal/runner.py",
+      "sha256": "20362715f27015ca9a2bbda88acf148e37aad778e3d9f443f324ac8d7ae7aa0b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/goal/runner.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/impl/__init__.py",
+      "sha256": "0e60c5c8d478454f1e88ca1c29fda3f5e050a268a93feaeb2605352e85564c30",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/impl/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/impl/local_conversation.py",
+      "sha256": "ea6f7544d054308243a23b958f155e0a8abf2242db0d31c55b885133be081d2d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/impl/local_conversation.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/impl/remote_conversation.py",
+      "sha256": "5e160fca65ab68229ca1813cd7efaa88a149d71beca6a781e776db2327ff0c8b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/impl/remote_conversation.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/persistence_const.py",
+      "sha256": "c39a9ffe25149e14f87e6822d5747c87a50c59bde130869e51a5b3bf309c6516",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/persistence_const.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/request.py",
+      "sha256": "c5242c6560ae460eaee47a5c3ac7a686c066bb4b8748873e24161258586cfcdf",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/request.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/resource_lock_manager.py",
+      "sha256": "cfbe93b802b3aabe816d5d9ffe574ee33f0220a95cfe36f2d42a43ca732f2dfa",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/resource_lock_manager.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/response_utils.py",
+      "sha256": "acf942ddc0d29a842d7ba359d242ba87afbd868e5c6c5f23130f838b21218083",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/response_utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/secret_registry.py",
+      "sha256": "d7703ce115a4e6abd976af59e4516c5338fcd0f03c906fb176d554d50297743b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/secret_registry.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/state.py",
+      "sha256": "7e488ee6cb483f35b852bcb0900f5f49e0490a2b5bf28d6387d869d207727360",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/state.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/stuck_detector.py",
+      "sha256": "3bf25f2d722404398e4744ae188f575f628463732b3606a8da6049fb8ff0039e",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/stuck_detector.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/title_utils.py",
+      "sha256": "d9fb608c1ee0bde9db4b0fec9a6563428652c78601231515b22bc945ae9b1d8a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/title_utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/types.py",
+      "sha256": "d5e955b491e9decc987595d4a61803368c2f7fdf9b6cceded60f753a5b6d34ef",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/types.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/visualizer/__init__.py",
+      "sha256": "d0b5e92a5b7678972ba8fd73ea340ffe72f1db757c12b9d090a612c6f529d3f0",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/visualizer/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/visualizer/base.py",
+      "sha256": "a0c83e26f41cdf879b61d0b727d8ad1eb6a8076bb731d43a13bec02a24e6bb7d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/visualizer/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/conversation/visualizer/default.py",
+      "sha256": "b4a1e4eb21560c44f8481241731ed16b222aa5e41e87d1b0df56872a2ebc3587",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/conversation/visualizer/default.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/credential.py",
+      "sha256": "b2cb93a526e71f16b75940227a2bac16c450a73843cfbe35fed56c81b34dcec3",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/credential.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/__init__.py",
+      "sha256": "8addc06a09fcf7f2b9bea8bbe9ba738c72b6a0432781ebfe6001c61b78c6ebeb",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/base.py",
+      "sha256": "73e1dd5c5435fd03227cbf7c84e7e46a506ee8c6654b29097647ffb7813f089b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/impl/__init__.py",
+      "sha256": "89fd12df8edb71c89a6ebdbcf12bb0803a9e449973a010669e9e8e892c2b5583",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/impl/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/impl/agent_finished.py",
+      "sha256": "aa73459e6560ef5ac591c616702b7e21b37fd597a95ab186826445ac326814d2",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/impl/agent_finished.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/impl/api/__init__.py",
+      "sha256": "720a4ba158689516c4e98c82bb8294b342271ba2c771d05500cd5eab58daf314",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/impl/api/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/impl/api/chat_template.py",
+      "sha256": "aaee6d24c8b536eca7a7816c57f306fec033e15ea1a4769cb5bc681991a40091",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/impl/api/chat_template.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/impl/api/client.py",
+      "sha256": "4dbc9e755ce6d6ae1e26ffd2034f75f7e7b0cafe88fe9841e2c321661d61752a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/impl/api/client.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/impl/api/critic.py",
+      "sha256": "2b5317127b8d0f6844f65e5453ae965731bce483967b5c86df7d07aa7ca23930",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/impl/api/critic.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/impl/api/taxonomy.py",
+      "sha256": "913a94df62bfe7240f5fa0c09fd264106ca47843a96113d50ea213b0b03430bb",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/impl/api/taxonomy.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/impl/empty_patch.py",
+      "sha256": "fdfbd5abbec31727bd852e6f0287546b5e0b302cc6f15ae136aa36da32c9efb6",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/impl/empty_patch.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/impl/pass_critic.py",
+      "sha256": "9229135599af7b40c24e4427851bad75449f7f438b6ea1f45aa4711973f5d376",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/impl/pass_critic.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/critic/result.py",
+      "sha256": "a6dc756910e9de4be1aecb134bd6bc4122d046daba4986036f8128547232b678",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/critic/result.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/__init__.py",
+      "sha256": "5c47dd3d4c3e965cd44b51e5f5fbcab6fb29491d5db44992af9722c1b128f638",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/acp_tool_call.py",
+      "sha256": "a631471a53b7ddf5e09bee577bb887e90ff84cdc3f9237b22098276732f6b0e7",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/acp_tool_call.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/base.py",
+      "sha256": "0d90758757329bbd0d1301586b87612e7746e14e6d2bb3e272e2d58f16fbb60d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/condenser.py",
+      "sha256": "1b172330b5270e29c6bf12a8a61818009b9b252fd497c51ad3eac51a3deb5c1e",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/condenser.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/conversation_error.py",
+      "sha256": "bf24037521f4725f7f3ed08a11b35ccdf346f8e3944852021b6d99e399c61e31",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/conversation_error.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/conversation_state.py",
+      "sha256": "57eb62e522cbe522f7df4b04390829cbe53cb44ad5c19606d220b702a8d3530a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/conversation_state.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/error_classification.py",
+      "sha256": "89edbb42edb032d3f8f66ca2ba30a94599dbcad5afceb10b046472a57999ad9d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/error_classification.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/hook_execution.py",
+      "sha256": "7f6a90b160180b05c5f94bbf99938301b73c5e27f270d92ca219747a29ed3319",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/hook_execution.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/llm_completion_log.py",
+      "sha256": "542c4989906c9f517a4d157a7f0bec3ece96f43a638217c81662499462b3b578",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/llm_completion_log.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/llm_convertible/__init__.py",
+      "sha256": "8ab48b2208da943a2b9d5d82ed7a13485f5bc10335c809bb2e766fa7b4345146",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/llm_convertible/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/llm_convertible/action.py",
+      "sha256": "d3a6e8ba116595668ba3cc2bb667d8bdc1d39fdf935f36dbb83894dcbfcdf1d9",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/llm_convertible/action.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/llm_convertible/message.py",
+      "sha256": "b33f73063a045bb85479a6facaee9980a2c94b7177317d066c2f9c587798cae8",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/llm_convertible/message.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/llm_convertible/observation.py",
+      "sha256": "14eb6d888914a8d6a5ea205b7b4edd95b98c454d20d218256df3f0f26ac7e159",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/llm_convertible/observation.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/llm_convertible/reasoning_utils.py",
+      "sha256": "0afdc057738a13eabf8e98cc6a5b0d4f82ee6ef82ad1782d77f0292897b34764",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/llm_convertible/reasoning_utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/llm_convertible/system.py",
+      "sha256": "d28a1c618e3e0cd659cb68551e5b593f0d49d40f08e2b8975bce2f3c1b34d44d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/llm_convertible/system.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/resume_transcript.py",
+      "sha256": "1cc838ad238115755e257493e0724f98452f9a2e87dbbb8b043fce56be216cb3",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/resume_transcript.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/streaming_delta.py",
+      "sha256": "e98975d490f7aae148bd409b30ed3089f2b44e148efd3a1c86d32ad4cd59021d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/streaming_delta.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/token.py",
+      "sha256": "42511b06b7d96877bdb69f3e3ade2f4ddd13fbf563ee5a54a8a7d525c54739e2",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/token.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/types.py",
+      "sha256": "a06302d0f97ac73a69fee22a555ac137e1f206a8fb25476ec023fdca88e54f59",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/types.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/event/user_action.py",
+      "sha256": "f7cf98407cebedd81aa9fb07bf51a1365e622f7aaf64ce9a6b009bb35dabcd15",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/event/user_action.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/extensions/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/extensions/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/extensions/fetch.py",
+      "sha256": "343f50ba4285bf3cf22618f6e7651cafd7d7fc4a06289cb811c35b93e66d741c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/extensions/fetch.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/extensions/installation/README.md",
+      "sha256": "75d6ccefd10c1e3d649824d74076fa85c9cd5d6d4326d1bd8de7dfb99b29aad4",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/extensions/installation/README.md",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/extensions/installation/__init__.py",
+      "sha256": "5a3dfb0ea9a38c86fbfcfabea66db70e4b22811192f001ad810cd156523de068",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/extensions/installation/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/extensions/installation/info.py",
+      "sha256": "088d31609087650b058f2d81e2ae9478d6ce2d248bc58fea2dc30424df11929a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/extensions/installation/info.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/extensions/installation/interface.py",
+      "sha256": "b8e0c2835fe7e30937d4d284e4b04c517cc0658a646703faf6256dbf5b583c37",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/extensions/installation/interface.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/extensions/installation/manager.py",
+      "sha256": "b574d291121cc1998842ec78dd9eaae8cfb07bc2ffb4e56e1c82e689003ccbf8",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/extensions/installation/manager.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/extensions/installation/metadata.py",
+      "sha256": "84685f4e0a977d6d0a2556d09018e017c29a2e2c54205462bfd6c9bf5318d206",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/extensions/installation/metadata.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/extensions/installation/utils.py",
+      "sha256": "c35b2918e47f46e05612c4d25abab58566262e6eb23a14569d301c2e082581d6",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/extensions/installation/utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/git/cached_repo.py",
+      "sha256": "021dea7f343b0fa8e1d7a69abd89e343c9d913a5826e78110f25282a30a0575e",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/git/cached_repo.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/git/exceptions.py",
+      "sha256": "4f7fe374ece294adfdcb5fe294c4376774529311c965a7d4a194f33a2b868e2d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/git/exceptions.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/git/git_changes.py",
+      "sha256": "85b64cc4872dbceecc78197dc3e09f94bc933ee2f419ccda01328c77ea282058",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/git/git_changes.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/git/git_commits.py",
+      "sha256": "2914bec9948a9cdfa0901f85a2dfd28e63927906d0f0f97e5aca7155f522e491",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/git/git_commits.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/git/git_diff.py",
+      "sha256": "63658d190ec2b9a138128813461b5129547219a32672610983c862b59a527bd2",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/git/git_diff.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/git/models.py",
+      "sha256": "7de7d70c44f4d0441e6f1fb6b53b76c33565a7e0fb68fb769559a62730b3c23c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/git/models.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/git/utils.py",
+      "sha256": "2c9349867c44c1ff993971afdff90068c9aa0cf0a17fc37cdd6966799df499d1",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/git/utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/hooks/__init__.py",
+      "sha256": "790ee707bff98ca826e0eb1b9d1e3e752bf22e8fee0412ab04a6287d0cb47e64",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/hooks/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/hooks/config.py",
+      "sha256": "781d129cc848d65005412e5034013d7839e8ce37345e29cac15181c690f095bf",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/hooks/config.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/hooks/conversation_hooks.py",
+      "sha256": "f74c882e03753d373a56b95f3baf410a60bda08670d184b2dff112bb56def8d3",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/hooks/conversation_hooks.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/hooks/executor.py",
+      "sha256": "b411e1125891b23f5bd11a9f103fba504acdd3291cceb48b9446bcd43b6c303f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/hooks/executor.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/hooks/manager.py",
+      "sha256": "c7eed7b066bd17d8529361d2ac6423da3afcfe57f21ba9fe12e2c8886073b846",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/hooks/manager.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/hooks/types.py",
+      "sha256": "650a76fc756f39623d6103d9227149d10761a4aa385311a6ab860b633f737ce6",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/hooks/types.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/io/__init__.py",
+      "sha256": "ea95d358fd375a7e52edbe9f393d20dcf627faa4a810619daebc01a802d8180e",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/io/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/io/base.py",
+      "sha256": "9beb4cab7126e0339dd7b70fd13ebe81cf5cffb144f876a470f2d27061b27151",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/io/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/io/cache.py",
+      "sha256": "4d90fd3f1f962b7d375868e6e678a7f67dd308a1a2009f8f22aacce4c15e8397",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/io/cache.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/io/local.py",
+      "sha256": "051913a427a03ec811f38697e362d71fd8f9df506895e38ee74a81890910131b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/io/local.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/io/memory.py",
+      "sha256": "df136d15cdacc187419de094957b6b3b115ab63d08d102506469388cd18ff5cd",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/io/memory.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/__init__.py",
+      "sha256": "b3d4528a2eb704ad187112851a375d1ff773745ba9a6d9f02a22735a0041e67d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/auth/__init__.py",
+      "sha256": "57ff67c75504e3e1993a88e65cbf2258757a87ef572ee6ef95be2754f7e11a58",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/auth/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/auth/credentials.py",
+      "sha256": "92974d9fe904a25c12e473ff8adaf5f0f61e5f5719d512580a977d002710f004",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/auth/credentials.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/auth/openai.py",
+      "sha256": "f30bbc1460d54db9a15761db4d077039990eb59685267f89d46d90c97eaf3b5b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/auth/openai.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/cleanup_profile.py",
+      "sha256": "b0a6b47a524d676599d765dffef7f23189cccad3280ee4cbe073e0b23b7499eb",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/cleanup_profile.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/exceptions/__init__.py",
+      "sha256": "b3c678084b3dee63de0e878b4fe0685e6e003ec751aa1c7e0541cfd4bacbfffd",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/exceptions/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/exceptions/classifier.py",
+      "sha256": "ee8f17361da0eec359287cb69e267e4f8043efdbf8f82617701ea8a5b3a9b156",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/exceptions/classifier.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/exceptions/mapping.py",
+      "sha256": "f0b8b063765adc6f85224665050923ec3f7c5940144cc2902d967176c5113e25",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/exceptions/mapping.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/exceptions/types.py",
+      "sha256": "b544fb4768d8c68fa0ffec5e3b2bedf46baf9f70b2baa45e5d41dc04724d9ac4",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/exceptions/types.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/fallback_strategy.py",
+      "sha256": "c4121eacd929c6ad76865a742bf1adfe5751ce27a63af7c884865daecbbff03a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/fallback_strategy.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/llm.py",
+      "sha256": "5a971190639be37e74a3ab23a5c77ccafd74fb597773b394066c2a69772c097c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/llm.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/llm_profile_store.py",
+      "sha256": "46fabd9dc163666f2f296e5da5ffe866ae812ea7d5e8ed1cd6953817d3ed8233",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/llm_profile_store.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/llm_registry.py",
+      "sha256": "b466739c5161b6226f7e4f2f9506869804a827ca93031f5106a5132dd62d60cc",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/llm_registry.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/llm_response.py",
+      "sha256": "0da0550648a3e12cfe46c62145bdd451cbc9093cc205c39843d221170378ba42",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/llm_response.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/message.py",
+      "sha256": "aa18869b482f2eea942c4b444ab84ff7aaf6434dd043cfbea68b406fd435c457",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/message.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/mixins/fn_call_converter.py",
+      "sha256": "4b3f54e6163cd815674aa7a9044ab77ec4ba2e76af47884a83b8be33dbfa10bd",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/mixins/fn_call_converter.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/mixins/fn_call_examples.py",
+      "sha256": "080b8176a9923f79b32d57e6655667611126d9bb8fd5ea18aa978e6f37fa5c8f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/mixins/fn_call_examples.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/mixins/non_native_fc.py",
+      "sha256": "809db0cd67dfb154599a4ce8f50f60d458b2070a5d37ced694b797c56d8dd26d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/mixins/non_native_fc.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/options/__init__.py",
+      "sha256": "127b6f3960b99300e84cc5d732462ea16310d77843f18b42f4210c0ad9ca8fba",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/options/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/options/chat_options.py",
+      "sha256": "64ad345472e78768c7ce015c309c77b67f7aa07495b621006a624b130475ad22",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/options/chat_options.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/options/common.py",
+      "sha256": "68350dac9689b403359a717df3d10bf886ca0fc8896f45ba040560fbbed78e56",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/options/common.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/options/responses_options.py",
+      "sha256": "8b7cdf1f8f60f619b7352b98ab106426329dd86a9e1e5d050fbb109ba522f635",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/options/responses_options.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/provider_connection_store.py",
+      "sha256": "d215d73680887f7f945313b3e5b16a54f7e6cc1b2dc03aee64ca8f8dc528c49d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/provider_connection_store.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/router/__init__.py",
+      "sha256": "37caa576919d2cb0966739f9473db2f0085e4a809340b1a42ce04308534c2510",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/router/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/router/base.py",
+      "sha256": "814b70b0f47872d7fb43a2a1422c9b039af2c618d229fb4169af0295a20de247",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/router/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/router/impl/multimodal.py",
+      "sha256": "ca623b97d6210ca1095a86958a398395e8c7015d05057fe9ce58eedbb65a4136",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/router/impl/multimodal.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/router/impl/random.py",
+      "sha256": "a011e815304c6bd39e0f283ead5e2c88b0a437aaca60bd2e0e564c12c781deba",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/router/impl/random.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/streaming.py",
+      "sha256": "5d96f396448a238842f0de3bd6f165c3830464dd20a4e8ff3fdfbc3824caabbe",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/streaming.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/image_inline.py",
+      "sha256": "5de12e41a624307f5e541edda6c47ed650a3192ecf0d396fadacb569b072463b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/image_inline.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/image_resize.py",
+      "sha256": "ca182535b513b4870eacfded76f743566cb2c0ddbe7fc9dbdf5683da9aef9d35",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/image_resize.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/litellm_provider.py",
+      "sha256": "cfe2724ff06a9bdbc07fe16a4440926a394d5efaf9cf6f4001fd52e1963ae7b2",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/litellm_provider.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/metrics.py",
+      "sha256": "860b5153385c9085b2567ee7174aea5dc4daa105ba9fe76eeb9a5bc01df6be6d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/metrics.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/model_features.py",
+      "sha256": "deb7f5f931d13d3a4a48ca3e4d25f094697ccdc7130cf64329a25ecbda2a87b3",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/model_features.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/model_info.py",
+      "sha256": "5a3d11614dfc129122b157355c308d62038796f3e9d45bfd765f855baac2f0ab",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/model_info.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/model_prompt_spec.py",
+      "sha256": "61ef401f2eafecc0e58acb6d562198945fcd7609acc95e5d8f9cf0b625f6c8e4",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/model_prompt_spec.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/openhands_provider.py",
+      "sha256": "56403e6e2a7e632c9b03d9b39762864a31ab1c9d19428ffa23db47c8bf00b818",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/openhands_provider.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/providers/__init__.py",
+      "sha256": "c0f8216cb44207b58538faccdbbbec30fbeed2a82ad28bb56dad868de30677ae",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/providers/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/providers/openrouter.py",
+      "sha256": "25fe59e817c5eb632bc554400315487d77a07c9f65ab24e8243d15529830f88b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/providers/openrouter.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/responses_serialization.py",
+      "sha256": "a7876cbc0a3853bce7e1641a72dde7b2d24cba6c2497b94d76b71a578ebbea53",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/responses_serialization.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/retry_mixin.py",
+      "sha256": "609b84dd4185a49d51101d0876341f5bb1b5aefc160c6b7192e16d4f11170ed3",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/retry_mixin.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/runtime_metadata.py",
+      "sha256": "ffe99aa7d144f8e247ed638eb506b60d1c4e531e455906209949860847f8747a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/runtime_metadata.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/telemetry.py",
+      "sha256": "ad616f1f0528ae6fc4b1a2b3baad34fe5041865b4019e2bb5543a42937b17119",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/telemetry.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/unverified_models.py",
+      "sha256": "a5d4e644d1286bc8f77c9d63cfe87f2fe8895a543cb36a322ab29fa189a6d9e7",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/unverified_models.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/verified_models.py",
+      "sha256": "1d4c81f1cac941a6d8fccf1f65e324c45541489a950aa2bb71decd1876a5585c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/verified_models.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/llm/utils/vertex_preflight.py",
+      "sha256": "467702748b3dc11cffc4ca456abc173ae6823c7424410260c07b6830aea36a5d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/llm/utils/vertex_preflight.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/logger/__init__.py",
+      "sha256": "bd9bc50d87d6d3563c01cb77b6f78cb375f14f2b0996de07793fa7e97fee8d89",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/logger/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/logger/logger.py",
+      "sha256": "7a7f121f3142d9b6a88509aa6e013cb749af57fc4c650ac82c4c9c3b374064bd",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/logger/logger.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/logger/rolling.py",
+      "sha256": "13aa32d1ab2098e8591e85a5482c3440ad4f2a74ba92fb718e858b02caa51afb",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/logger/rolling.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/marketplace/__init__.py",
+      "sha256": "1d915fa0ee9bc4cca20a7c3b7efa186df3a64a47786702b635924771591fcb3d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/marketplace/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/marketplace/registration.py",
+      "sha256": "2d42c7e3aecf34251116a89ed491211209a6e902ceb66829949c6e2bcf2c802c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/marketplace/registration.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/marketplace/registry.py",
+      "sha256": "2bc2dd6a0c9d0e651fc03ffd4cdc86b040bb6e7f5a3f46620add51cceeab16ea",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/marketplace/registry.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/marketplace/types.py",
+      "sha256": "f77e57ecbe8b1c35ea7eb9818b80d3415e25975d66bd6e32ff70f0d02d667fb0",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/marketplace/types.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/mcp/__init__.py",
+      "sha256": "d3a91f7fe6fb12352dd63171c3d9f10dff8df51dbf6c88964952cb5c9c7ca82c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/mcp/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/mcp/client.py",
+      "sha256": "ddc68e0ab69ed9401399ed789ee4a523add3309811c6f196beffcac96b232c9c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/mcp/client.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/mcp/config.py",
+      "sha256": "c67902ec986f0e77668c7739b9b51b5e36af367599a844d60c69c577c47d9c76",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/mcp/config.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/mcp/definition.py",
+      "sha256": "bc52d078b5bdf5f0733c647b5fbff51b34e62079525406e6b20dde961864a795",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/mcp/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/mcp/exceptions.py",
+      "sha256": "37883b5a3bb8db44d027b866724d5ee546e559b0bfed3a2b6fe513163d4637bd",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/mcp/exceptions.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/mcp/tool.py",
+      "sha256": "3db2f493506c76c23bcb6a271f8f8923816e22ca3db015f8395d4cf9f7433328",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/mcp/tool.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/mcp/utils.py",
+      "sha256": "38c0dd26516eb07be074bb015c5a15c07d2b228e81cd310477f0ec55dcc46e41",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/mcp/utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/observability/__init__.py",
+      "sha256": "f6a6de1994ec088ac657771ce9a8b1e1e9a0a764f591e1cd2528e2a157cf5c93",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/observability/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/observability/laminar.py",
+      "sha256": "933a97fc97af6e936d66030a424d83c2d3f25e9c6f204c0c5c1cd513ac99b268",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/observability/laminar.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/observability/utils.py",
+      "sha256": "374a7c002b3658a4b53f214f8e253e3cf9e0e96b007b5e59a45562140c3580ed",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/observability/utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/__init__.py",
+      "sha256": "0aae45e20663580afa99ca46da4eeaef391567fa31d00122aa64c3cdd175b963",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/discovery.py",
+      "sha256": "7b47f338cd62e744b1eba8d7f2155eb4ba251762a50c303e7b673af7ffb75790",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/discovery.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/fetch.py",
+      "sha256": "1b8d495c95281fbc05dab9287c06ebc88fb162b0e267d65da1fd58cf1e699e8f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/fetch.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/format/__init__.py",
+      "sha256": "9225df1f474f8697bcb0045c2d5dba13e5fd0af1dd53a9c031740d65e4cdf007",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/format/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/format/agent_plugins.py",
+      "sha256": "16ff3171a5faa6a0be4e558efcd89c6814c7db38dcdf82baeff683b1689d573b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/format/agent_plugins.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/format/base.py",
+      "sha256": "5a19792748fc40e45d9f0f99886070013df944799957fa7ec92c77999d35018a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/format/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/format/claude_code.py",
+      "sha256": "08f14a86c753095c024fab98d8041f30a7aecd8f1f29d271ada228043560ee5a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/format/claude_code.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/format/schemas/plugin-1.0.0.schema.json",
+      "sha256": "0a4aad95ce337878ad38802ebf0daa3fde76abe3f65400c86bcbb1ec0b3ab883",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/format/schemas/plugin-1.0.0.schema.json",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/installed.py",
+      "sha256": "979109c849e3c4cc01f49f5831890b39b9e4977aff2f09f865350d5b033ff8e0",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/installed.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/loader.py",
+      "sha256": "a13f010ed2cf81df465378ae357bbde8dde178b56b0b62a3deceb93b03b4b948",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/loader.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/plugin.py",
+      "sha256": "ca6d78b6309e0834657d6ec0894f35297782cf306b28dce16c3b32391ba20c4f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/plugin.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/source.py",
+      "sha256": "cb6c59a30805f3ea290d314424863eaeb5a31a1332b14e575a4dd702db93fdd5",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/source.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/plugin/types.py",
+      "sha256": "5c7e049a22c374a62ff6bc075d7d61dfe022e5794317e9e83c0ff881b18d60a1",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/plugin/types.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/profiles/__init__.py",
+      "sha256": "935fb84e56a5590d400d31fe8b3e51d3aeba1598fe7ac05f9c40c62da5bad8ac",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/profiles/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/profiles/agent_profile.py",
+      "sha256": "7f5aee594feea5f072f07a3b1feba51309f79ca9bb86c71b900f39cff255fff0",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/profiles/agent_profile.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/profiles/agent_profile_store.py",
+      "sha256": "c3dac358e21f28f67bfa0d55522b695b9a7706948990c7fdd6e2678fc6e779d2",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/profiles/agent_profile_store.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/profiles/profile_refs.py",
+      "sha256": "b873e2850cb61694d63f875f073002a0631513c07e7b7cec9de79823ce9c7ca5",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/profiles/profile_refs.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/profiles/resolver.py",
+      "sha256": "c9db57ffcdc58d5fe3842960d74825dc87e8e12b8aed690c6b9ca1cdeaae5157",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/profiles/resolver.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/profiles/seed.py",
+      "sha256": "0e48db5d9c093c866f06bb189807404a33234d6380b1587ea85da4e5a1750447",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/profiles/seed.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/py.typed",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/secret/__init__.py",
+      "sha256": "63e33658f7d82df5586521591937fa3033a78ec2f949ac844ed038b7d5f4823c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/secret/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/secret/secrets.py",
+      "sha256": "825cf392810c7d07cda850c3f2701d6f5e10bbed0bdca7c643665457d9c85279",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/secret/secrets.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/__init__.py",
+      "sha256": "735d0724821991e4210cb5251cb8117e8cb4fc42e32b7080a3109a29b42395f7",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/_shell_ast.py",
+      "sha256": "e1b6489892fd5896bd6d59d9c8f0c4b4f462a35537c501111b3dc07908ab956b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/_shell_ast.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/analyzer.py",
+      "sha256": "57a168c21f37b1f12bd527702b7516d4f3501da847c701df95ad0a9dd4e899b9",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/analyzer.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/confirmation_policy.py",
+      "sha256": "6ecac839fa3740e5cdc8aae6515cd0cf4ef4177c5b27bb99a7d593af844c765f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/confirmation_policy.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/defense_in_depth/__init__.py",
+      "sha256": "4a192b931caaf41afc89f74b0363e8e91e9b6a9248fe58b219a2301a48284377",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/defense_in_depth/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/defense_in_depth/pattern.py",
+      "sha256": "fd93626d636d70cffaeaabdf8677ad508bb301c9b9df55c16b6b79e504085304",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/defense_in_depth/pattern.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/defense_in_depth/policy_rails.py",
+      "sha256": "59c45bf024d37309d30c8f45dfcf86963aff621195e82b417fd9a31ab97f55b5",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/defense_in_depth/policy_rails.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/defense_in_depth/shell_semantics.py",
+      "sha256": "491043379da64b95c23c8a23d193d5fd53375935c8c21ce4ca02f28a69e8b889",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/defense_in_depth/shell_semantics.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/defense_in_depth/utils.py",
+      "sha256": "a1841b8dc20db3ce3ae377bee3ab9520dbb170ed44f4df807d1f4be1b4f6bd26",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/defense_in_depth/utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/ensemble.py",
+      "sha256": "5c776dd68bbd6b6ca0ea22a59c7b78d71c4773bc81dff8419ccb387a914c23f9",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/ensemble.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/grayswan/__init__.py",
+      "sha256": "1fe7dc4187a4ad203d0ba8bacdad365492683943dfb39148c64020dacd1990bb",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/grayswan/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/grayswan/analyzer.py",
+      "sha256": "e1e9b017916d81f8e07ca904a0c5a432e5187f56937ca0aa1851fee3280c9d57",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/grayswan/analyzer.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/grayswan/utils.py",
+      "sha256": "bd4f064b27b4785daa31b6df46bee78dc1dc91ddececeac40ed66d42dc43bd5b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/grayswan/utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/llm_analyzer.py",
+      "sha256": "c1bed53498f394a9229a1d66476c299fa2d2a81768dc6649aa1590a7cab2932e",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/llm_analyzer.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/risk.py",
+      "sha256": "b9bdec25647e92fb71f4592cb9352d172d75b3da17153ec2073f00d79c96a0fb",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/risk.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/shell_parser.py",
+      "sha256": "25d9987a3d4d1b366c681fff75ec6a9dfb8d4827c3a75215dcad43b88759064d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/shell_parser.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/toolshield_helpers.py",
+      "sha256": "b4c917dd1993c6aab1c2a311b9a4637bd3c31f3f5157e773e2225eee6ea9f150",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/toolshield_helpers.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/security/toolshield_llm_analyzer.py",
+      "sha256": "50b4f48938c55f635843bed9db55109eca9b99ed9a27d0cb03ec9771c3924230",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/security/toolshield_llm_analyzer.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/settings/__init__.py",
+      "sha256": "f6843c0e4cbeac24e2628270141976e07648423a6b1808ed242fb95f9b5b0512",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/settings/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/settings/acp_install_catalog.py",
+      "sha256": "a5258b2347d1deb91171e8cc9383bc5b32d765831286dcface10865076c44c50",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/settings/acp_install_catalog.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/settings/acp_providers.py",
+      "sha256": "ffb55b26a09a339d99a85e71aac8e8ffc291dff48001080dbb0c0a1324b8e180",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/settings/acp_providers.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/settings/api_models.py",
+      "sha256": "2b7376d0d78c9f204d9db6056fbf9aac879584eae434fd39de298b3e9e906bbb",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/settings/api_models.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/settings/metadata.py",
+      "sha256": "13aa926c259e213d522f8163fe6ddf6c8b8c00e55c4b0cf1323947dbcea962e2",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/settings/metadata.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/settings/model.py",
+      "sha256": "e8448e36a6ec4b2481ac3713afda16c0dca221a0cf7b0a8c263b3cdb09655043",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/settings/model.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/skills/__init__.py",
+      "sha256": "76793da0393faa31972234da05073efba7311c7d807d01cfe2f74e3b22d8ed3a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/skills/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/skills/exceptions.py",
+      "sha256": "b550526d74d71b7da76f54de6d502ecdb34d1ef9fc19272948cd5b1c29d0cef6",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/skills/exceptions.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/skills/execute.py",
+      "sha256": "437b18671126c16d15610412735d37a0b22c94a48920aa096bdaed7c78a32998",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/skills/execute.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/skills/fetch.py",
+      "sha256": "ee740cbdb13573a22e404dade2e7001dc8cc7324d046c413b2e513ef94eee767",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/skills/fetch.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/skills/installed.py",
+      "sha256": "7c84c74f47c2d4a2e50e3e527e0404fe10adc040e8e7cc60b670605e1ac0ebaf",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/skills/installed.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/skills/skill.py",
+      "sha256": "cd80540adf35f7978be7369215ac86d236cc2e84828dc409f5eb0ceda2445424",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/skills/skill.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/skills/trigger.py",
+      "sha256": "12a6000029768d994e8d896273752568c3cbc33e6ee3041bda8d3f3afba2ce12",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/skills/trigger.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/skills/types.py",
+      "sha256": "2efc82bde1c14addbe83d2dba6bfde40cbce77878406325bde2ac058bf8ecc4d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/skills/types.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/skills/utils.py",
+      "sha256": "a89ce78a676f5f9c827210021315e423d11dd9f00f4bf74687240ccb028c390d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/skills/utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/subagent/__init__.py",
+      "sha256": "f7d9bfd1dbf9582fae33836598bfe76ee41521ef497a9ed1ae3ee90cbf72cc31",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/subagent/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/subagent/load.py",
+      "sha256": "83745736d225fc0ab868a6ec48ed319867a446e848cf9b8962d62d34d041793c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/subagent/load.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/subagent/registry.py",
+      "sha256": "97f0c70cbb5a6460f5cab8110b0865945c328014d47d7548ec1718f734f5a9dc",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/subagent/registry.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/subagent/schema.py",
+      "sha256": "d675ed568910e981b17ab7745ff056f5e1876932bdd578a24cf829fec6d7e039",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/subagent/schema.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/testing/__init__.py",
+      "sha256": "4a1a5f54b69866d6eecbc319f50ba70a8b6b7870aaaa14411eae81297f790d19",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/testing/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/testing/test_llm.py",
+      "sha256": "80e065fdad1cb3ab287ff5f7b9eb6ba766e626df7a6706062c8e0b89cd952573",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/testing/test_llm.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/__init__.py",
+      "sha256": "2dad3d362a7ff0c95d6538825dc1a489affabd01555090437db113a9a86de329",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/builtins/__init__.py",
+      "sha256": "5dfe6bd17ee03789fc75b8f9755dac6fe9ee185f4f49413e88250cd30d419b2f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/builtins/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/builtins/finish.py",
+      "sha256": "a4fbff6ca0ce404e2c50af65361d47d650dac5abc7a338cec0b088b98adbe36e",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/builtins/finish.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/builtins/invoke_skill.py",
+      "sha256": "8629191a5ad7d3c266ec15ddc34f8d7fed141194ef96618dffa517fea6ddbd6b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/builtins/invoke_skill.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/builtins/switch_llm.py",
+      "sha256": "ac3f53fc2c62c05701bc4bc6685b8ba9e0745441c036340fe1ea1fe0e75d424b",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/builtins/switch_llm.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/builtins/think.py",
+      "sha256": "269f02047259c2bb4db9508baf12a55706fd1de435959079e8f0983315b7c169",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/builtins/think.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/builtins/vision_inspect.py",
+      "sha256": "4dc714693aec303cb183dd0bc849506985763258e1e562184e14f590d45d6e21",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/builtins/vision_inspect.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/client_tool.py",
+      "sha256": "889797175480bb2ea941a9da2e9b41d33b6958c7f41f89b84fbb63c24de3163f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/client_tool.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/defaults.py",
+      "sha256": "9eb09098c8e71b2eb5afe69b8baa3d5b0f8bd46543d44c6ea84dda9e04bf6485",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/defaults.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/registry.py",
+      "sha256": "ddbaa29cdffc79578ea33a450f9deb8233da6a4f34731466705cb8a54ab6ff84",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/registry.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/schema.py",
+      "sha256": "ed89453465c8f403281f651c373ee25551fe487f18dcfa7c5982b999e74e8b92",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/schema.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/spec.py",
+      "sha256": "3e0014f98a5bd694ecbd6760adaba20b85ef1d487a45ab5a7a9ffe0aa80d7b1d",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/spec.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/tool/tool.py",
+      "sha256": "c60d5c5b7598071c2a9f17eb223132b8eafa6aad3a139ec2840b9856bc7d6ccf",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/tool/tool.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/__init__.py",
+      "sha256": "0098e9735d64b63f5b9c3ac5c7deaa058a6fb25fce38b9b232c7d8346cb94bc1",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/async_executor.py",
+      "sha256": "99b4f4229b19365ccc538685b347a38437705c207b5e449938efc910771f14ae",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/async_executor.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/async_utils.py",
+      "sha256": "d1dfd9f21c7415a3dc524a097d8336aa84e4fdc9da36717a16680aa2fbc48cef",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/async_utils.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/cipher.py",
+      "sha256": "08c8808635db17295f57dde87d88275dc208e01a6358d156733e865f938f1148",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/cipher.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/command.py",
+      "sha256": "6bdf9896d04b12a43bb6aaf1a648d80b273b910fdef5393c5277f0ab931b6e78",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/command.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/datetime.py",
+      "sha256": "cc2740ee4b6274afda130b6888f47f0bea925c2db069308ea7f23ff64fe4b462",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/datetime.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/deprecation.py",
+      "sha256": "97396d5e85a916686cff8587e022343ceba3dd2136dc2e071bfd80b7ffca72e6",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/deprecation.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/files.py",
+      "sha256": "205e1ba4912d5391ba6b83da56363033887e9d52d03d85b40f6e737bb72e778c",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/files.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/github.py",
+      "sha256": "97efcb40ac3cdb4740fd4f0d9837666917803e180c016a9f1f5a11322d6ae4e0",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/github.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/json.py",
+      "sha256": "847000ee2ecd089ad085be56592b284f49ef989522d24a3205d6ef885adf75c3",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/json.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/models.py",
+      "sha256": "3f96018f50a298525c5a42976b209defa1860f9146cdc047338330a3f125ba7f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/models.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/paging.py",
+      "sha256": "9172ef3c5ab961221d99fe8046105316053063e2f2e115736bc8c67cc5e31363",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/paging.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/path.py",
+      "sha256": "107f058d007b38b12475354693db18be9438c47dad566ec6ec422c62f9e49cbd",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/path.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/pydantic_secrets.py",
+      "sha256": "60be11ad3cd656378cc05f80b015a2ea12eda1cfde6600cd2998ec6554875f00",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/pydantic_secrets.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/redact.py",
+      "sha256": "a5c004fa64872b8e4da145553845b7a9df30d59ba16964634711df2f76da722f",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/redact.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/truncate.py",
+      "sha256": "2d8440e3908147b75a482d3782cf349eeecf61d44e87de37fe788ea5aa2ab8a5",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/truncate.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/utils/visualize.py",
+      "sha256": "8d26b82a590e3a60fd0e12041492be9096a271a2b2df25b409b07caed9ce01d8",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/utils/visualize.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/workspace/__init__.py",
+      "sha256": "7072c487314ac61660fe917a9dff2ad38517142ed10baddbc436a1687488e35a",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/workspace/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/workspace/base.py",
+      "sha256": "a8e1648ccc76065eae2062d27bbf8b9eb2c4350634daf1b2bbb9d418ea9de0a1",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/workspace/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/workspace/local.py",
+      "sha256": "c6c63ee9b2c6b3d59db6877b3202afc84742b19563b16d8d25b4405b92a58cb2",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/workspace/local.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/workspace/models.py",
+      "sha256": "05463c3468343b85e8cef461defdc694aacdd17b2ebd4c9b40029792098e0d67",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/workspace/models.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/workspace/remote/__init__.py",
+      "sha256": "0b69512217e84cac99b3db170fcc87e9be13e581cebdd30f9ab88c98f507e6e4",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/workspace/remote/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/workspace/remote/async_remote_workspace.py",
+      "sha256": "31f9d8a17bf1fed67b30a0c6242a1f9e46002717c12aa36d336429af1dd04119",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/workspace/remote/async_remote_workspace.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/workspace/remote/base.py",
+      "sha256": "6fb7cde9ae3d3b39e4cd188231b5f2c2dda9972ed6e87aa2e09dccf6e1412b12",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/workspace/remote/base.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/workspace/remote/remote_workspace_mixin.py",
+      "sha256": "f61001d92d7a2bcc744b58e483961560f76d5b37f8643ded2f34a4259bcd1351",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/workspace/remote/remote_workspace_mixin.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/workspace/repo.py",
+      "sha256": "70fa9474c456788fec5bea572977199531412dbf37203f0e099871812f92b9b9",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/workspace/repo.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/openhands/sdk/workspace/workspace.py",
+      "sha256": "39fd6bdb3dd6fe95d2815f2ed74b1443cec286d680e64843e8727f3ed273e9a6",
+      "source": "repogeneration/vendor/openhands-sdk/openhands/sdk/workspace/workspace.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-sdk/pyproject.toml",
+      "sha256": "1cba0b824dbd2170ac0e475c4ee98529f055012b9cb25dced2c7a03d76d9e2cf",
+      "source": "repogeneration/vendor/openhands-sdk/pyproject.toml",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/__init__.py",
+      "sha256": "da03c5eae6f75bbecdb5ffda49d406b0f186474ad85762001fe042daf83a8e3f",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/apply_patch/__init__.py",
+      "sha256": "f05a004d5eb4fd6957cb0985c334a4f040eca410fa65b2c914f27cbbf0dc00cd",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/apply_patch/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/apply_patch/core.py",
+      "sha256": "e1ee7b147471f359504013e3f07eab1b5681e6d6f23dfb52420bb20c4cc146c3",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/apply_patch/core.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/apply_patch/definition.py",
+      "sha256": "a5bd9607ea6205a567313dbfa58755c8e2b4a66fb87892572f32b43cd4fd266a",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/apply_patch/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/ask_oracle/__init__.py",
+      "sha256": "61159c5d86936f495f89dee3f7743796218c52b28e63e2f1395ecdac82941a23",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/ask_oracle/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/ask_oracle/definition.py",
+      "sha256": "6660a850dbf29962716fecd89fdd78ee60483c115b1f2343cc629728f9d89d3e",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/ask_oracle/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/ask_oracle/impl.py",
+      "sha256": "653a43936c1fbb64fb50af20fa90ef1ad1f2b0130cc50b95b0c87a6402664ca9",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/ask_oracle/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/__init__.py",
+      "sha256": "33c85ff21223299860b316b5f3a830e7bb7870f83a2601c1f70ca131d1220394",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/definition.py",
+      "sha256": "159f76644123a1d9d6e9ee04c201300f34e22b0a1dd364521881b18483383063",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/event_storage.py",
+      "sha256": "6cf646d909961128f7ce67f593913874c06af24be1526df38521b28d3d4c8bad",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/event_storage.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/impl.py",
+      "sha256": "ad82d4b6cbb23cf65d87abece9d72e40db638895dc3bbd36065b6706c5cf5c7e",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/js/flush-events.js",
+      "sha256": "dddb4ba067763e339ea51bda52be3a71a3357061977a327a226a1c61cafe24b7",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/js/flush-events.js",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/js/rrweb-loader.js",
+      "sha256": "bd965ab87a83a345f557a17c68b1816cc6c641ef25fb3e07021edb68c014b3e5",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/js/rrweb-loader.js",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/js/start-recording-simple.js",
+      "sha256": "a6a799c4d539f0e8546244b2e62178cdea462f1bd01ee9e4f22cdc67a19ab2ad",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/js/start-recording-simple.js",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/js/start-recording.js",
+      "sha256": "d54facb1271f61e1558eba1bfc5f4724daec36351864f8321d5c5d4849c086fa",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/js/start-recording.js",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/js/stop-recording.js",
+      "sha256": "c595a41dd533cb92e961601b73a4f68e19be5c2339e2cd9730ccafc788831513",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/js/stop-recording.js",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/js/wait-for-rrweb.js",
+      "sha256": "fc62b3bb739a4b6db09450ec9588461e8059945eb897e8a2d769e64799df050f",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/js/wait-for-rrweb.js",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/logging_fix.py",
+      "sha256": "39f20cbdffc96a31e064b07971b5a84b7c46b80824d0f6c737ef88b2824a1ea0",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/logging_fix.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/recording.py",
+      "sha256": "b1df9b66794b121c68d9a94a7446944a95aa91b3cdeb1fb47223e039962f8582",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/recording.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/browser_use/server.py",
+      "sha256": "a6dc092f11e3f853c23aa1671d4f79494831a7589fa90774a6bdea83c4091a4d",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/browser_use/server.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/delegate/__init__.py",
+      "sha256": "c1f67fa171ca63dea4102de3d0e0c2ed3ca2391e27151b203c452e3a12afa9f2",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/delegate/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/delegate/definition.py",
+      "sha256": "2f84909dea59577a9041b0fadecd7314975fc71eefd02a46f165471d2dc02cc3",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/delegate/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/delegate/impl.py",
+      "sha256": "0b4bab177bb2a7a82f3bfc5f8ab828f939ab9ea4d4b2613aa8c37d777d394abb",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/delegate/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/delegate/visualizer.py",
+      "sha256": "e4c91cf435b92ffa788e7958d05d69c404c244f63eeb86962f6c84b1cc96fd59",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/delegate/visualizer.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/__init__.py",
+      "sha256": "97a33dd4249bd6554e5ad7a0fffcbbb7c044d8748e635c79182f1d8eb4c95494",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/definition.py",
+      "sha256": "e47d2e1c66035bd0cce00ce70fb109a63937736f5fb94ef2a1c5dd6f144bb1ba",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/editor.py",
+      "sha256": "1baf68835d7d9e5373657720c90610b119834fc6393d2d5fc62719c31e37e71b",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/editor.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/exceptions.py",
+      "sha256": "ca35cad9cc9f2cafe88b568dc3b8c9edbe9a0cf7e5697f3328a6864339d2307f",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/exceptions.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/impl.py",
+      "sha256": "35353ad394ff6d856dba8201376219059e8d7e4eb57d23970ca4afa41148e4ea",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/utils/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/utils/config.py",
+      "sha256": "8f2420d150037dccb9e36fd316664d0b9d076b07c2f49540b4616b4c9f975d6a",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/utils/config.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/utils/constants.py",
+      "sha256": "a5b3f2bfd5bde9d792be138735c8fad8bf6461219135ce98c06f7e20c7507f33",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/utils/constants.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/utils/diff.py",
+      "sha256": "c7b47e5340a655ed98b287c05838f90db44ac52fe4f33635c0d4ad1dd965b802",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/utils/diff.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/utils/encoding.py",
+      "sha256": "0ef21a1fdcd7b56d7cabbb13d1028d4947439011242b7e4632e43ff021f96c87",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/utils/encoding.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/utils/file_cache.py",
+      "sha256": "9adecacd489bff549ebdbbeac8e743d92e991f49fe9c9d754e32173d66ca4d90",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/utils/file_cache.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/utils/history.py",
+      "sha256": "77448b6375241be3b93bf91a5f30bb1cf4fb98202d0ce1422265595216c2fd19",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/utils/history.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/file_editor/utils/shell.py",
+      "sha256": "76b5a83aae24f247c25ca28c9b75529490e9d55de6ec2eb2cbd0c1dcb163e33c",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/file_editor/utils/shell.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/__init__.py",
+      "sha256": "a50988ef250ea30999e34108202de6614c1272a5348d794bfbe017af471640e2",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/edit/__init__.py",
+      "sha256": "7a0ff19ec5688eea45bb432df537edac77cc30c3b693b0aeb82a400c3c8a36a4",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/edit/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/edit/definition.py",
+      "sha256": "9349706048dd7e95b2cddf8dcac36eb9795efd2ad297720438cedae096aeb30f",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/edit/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/edit/impl.py",
+      "sha256": "ffb027a135463ed08c351a9176fc378dc63dabfca105c1155caf2bd0e056a473",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/edit/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/file_change.py",
+      "sha256": "48878c1dc8e52ff315bd7e1d577ffa24f50c7eb2674e65944a2b3729e2013bdd",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/file_change.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/list_directory/__init__.py",
+      "sha256": "a1c0827919b2d2ef4c71e9a0b0a17d564b4138048c1a98fc1880d0a20b6629ed",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/list_directory/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/list_directory/definition.py",
+      "sha256": "9912c55b9d1a052562c4e4dba3a0ab8c1688855e120ba4446228c330a60940b3",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/list_directory/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/list_directory/impl.py",
+      "sha256": "d0858895b15c47b0a4c01a7e3546b7b71d1781a18b2b9c4acbd6e63a67327d53",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/list_directory/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/read_file/__init__.py",
+      "sha256": "f6149d43b2ab28e466625f72d7bd0deba7c97d4c4dbb97b96cd2a0ca4423c9a1",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/read_file/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/read_file/definition.py",
+      "sha256": "f9c637cd329e19e87baab47b533f536686f39a896c9d72669e1877be004b8aea",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/read_file/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/read_file/impl.py",
+      "sha256": "2d5f81f242f2af9e58b38dd168d777eb734566706d58c7668eb54bb167492708",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/read_file/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/write_file/__init__.py",
+      "sha256": "13342bc9236541c7b08f3a16942d023bc950b9f790cbd3ed733a4cbae247b463",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/write_file/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/write_file/definition.py",
+      "sha256": "190a8d06bf7e6b94168984f336e093b0eb9097bed7add9e369e041d9415b554c",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/write_file/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/gemini/write_file/impl.py",
+      "sha256": "31da3a39463c2330e4da4a573fe4d475f15cf2296eea1440037767bbc53a8230",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/gemini/write_file/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/glob/__init__.py",
+      "sha256": "e08760bb9ee43f3677c438cabe905f0c43d0d99dfc5ed7f62325ebe00d3a67b3",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/glob/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/glob/definition.py",
+      "sha256": "c9a506b59db4bdf1b06dd808169962e636a078090acf5748fd6d019433310953",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/glob/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/glob/impl.py",
+      "sha256": "b960361be4c7d4a98b6d86ff9be718694fc14f7ff34a107918bd55fa34556226",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/glob/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/grep/__init__.py",
+      "sha256": "5c9b1c03eacfdf9b020a920b91c085dfab1dfd11bc5dd4f1e97dcdd765bb39bb",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/grep/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/grep/definition.py",
+      "sha256": "741373061ed52296418bfd5e4f1211ac3734780a34e468ab715e699a2c4ebaec",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/grep/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/grep/impl.py",
+      "sha256": "904f785c7c6c08c09a97abeae89f99236f455c63451c4daf311534036054e2a3",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/grep/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/planning_file_editor/__init__.py",
+      "sha256": "79d22ebd1e599c45d7b187d1b7cc5baead7967abed754ab800c82ebae93582b2",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/planning_file_editor/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/planning_file_editor/definition.py",
+      "sha256": "5f224058605c24450e47d1b51e3ca2c7d7cb47190f92428134642244e904de18",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/planning_file_editor/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/planning_file_editor/impl.py",
+      "sha256": "5bc31dcbb4236f3f7488a4a68acc36dfe4dc16d5f07bb564dfbdd6beb49c092f",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/planning_file_editor/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/preset/__init__.py",
+      "sha256": "3afd00a6d1d37dbb705cd54a1a2241ff0d04c2e41697efa5ab7adf6b2cd48214",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/preset/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/preset/default.py",
+      "sha256": "514fc343d371cc21287dc2a5fcc19e2bf173514618a25d3601c3b7adc93a1a1f",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/preset/default.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/preset/gemini.py",
+      "sha256": "146dc17098e79bab432c88e0e8488315392cc7995554122787f269cdad261e95",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/preset/gemini.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/preset/gpt5.py",
+      "sha256": "e382cebfa32770ff57f5053ba67d547dd8d897c79cf33294f63514eed5184792",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/preset/gpt5.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/preset/planning.py",
+      "sha256": "48e7b603936bfa3920400a2e08a182ca8dd47d129a501f316c0140e7d9baf710",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/preset/planning.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/preset/subagents/bash_runner.md",
+      "sha256": "6485915175e28dadc1371d68448a6371e353491896a4ef5eea0422425f12444c",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/preset/subagents/bash_runner.md",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/preset/subagents/code_explorer.md",
+      "sha256": "ff947caf38dbfe1bfd2d6ff1973ba798f8a34fbfd29cf213d624acc0603924d8",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/preset/subagents/code_explorer.md",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/preset/subagents/default.md",
+      "sha256": "e8355f405c62305e3cea6d1853bbb8dce867b94b594d04ab07c25484e6f8807e",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/preset/subagents/default.md",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/preset/subagents/web_researcher.md",
+      "sha256": "f2438787336621cc11e0c234c0a6be2b8f579cfeb66046fb9be4afcd7ed4e4df",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/preset/subagents/web_researcher.md",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/preset/task_outcome.py",
+      "sha256": "91cac1017b18a9fb7742ca5757ac65da6811cdbbda78ba5f3c54786c80f3e0a0",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/preset/task_outcome.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/py.typed",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/task/__init__.py",
+      "sha256": "2e041b1e8059d5e2f2ce1c17af219090d1125ce8594616a15c53d0e20c1f4479",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/task/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/task/definition.py",
+      "sha256": "219f91804e5bb0ebc45c58413f6ec03e86dcf87adccab2a2342d21172fbe6356",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/task/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/task/impl.py",
+      "sha256": "3c388f2e0fe39ca7daf05806ad0a66401822e4122b95dab464feda432251203c",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/task/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/task/manager.py",
+      "sha256": "6342af594ecda7e510ff7c0bb7a0e71c1e759cf1a80dbca6eeb2a042be6aa10e",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/task/manager.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/task_tracker/__init__.py",
+      "sha256": "3559b7084fc29080144a315ec61ec72d732989b27f0e1f09f0e3a8c364a51352",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/task_tracker/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/task_tracker/definition.py",
+      "sha256": "c8637fc24b3ff90a634657d88afe6e398c914ec85a16e070a20d0feb69b9c74c",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/task_tracker/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/README.md",
+      "sha256": "9e652d6f2c5924dc44efdcf549baf02f3f3c73376cabaecf04b693a4dd14508c",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/README.md",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/__init__.py",
+      "sha256": "2f989030c56141b07fa760c44b118aa3aec3f64be35345c8551f0b06e43b1e26",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/constants.py",
+      "sha256": "0de85b7e0d8f94f3233e38b663f3a14d4eb3cda94e62f2ed6edcebdc9228f353",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/constants.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/definition.py",
+      "sha256": "69ae7b5a82a8f2510ca7fa4c39a8d75aa63a6f3ccc48dc8ed3025ee546733cae",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/descriptions.py",
+      "sha256": "cd5c835f19f62d6fa94dfff2c38e9e5517a404951b859c65e2279afc5cf76cf5",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/descriptions.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/env.py",
+      "sha256": "9c267ecd8673191b3f1aad932e62ac43a370fd340ed4fdda34eeca66b1ed5e05",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/env.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/impl.py",
+      "sha256": "60e668d8b75d52907568eff55f9ef81bac1f62727a37c9c722979dc45bb16245",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/metadata.py",
+      "sha256": "de4898e63f61c4cd9745d25a71e08946f1552f668aefa08a616debbd613975a8",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/metadata.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/terminal/__init__.py",
+      "sha256": "5e0a1c57d3bff1ff88a0c721b93274a0a52d55454dfe816901c1d00fd9c63244",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/terminal/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/terminal/factory.py",
+      "sha256": "01cb2eae1ae0fc92b3650a1c8efc6f0360d15e66adc44447d25df04bd5aa3155",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/terminal/factory.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/terminal/interface.py",
+      "sha256": "f1e89e56ff32135c525dcba19c3847f09ed4857bd3f0c7989818b0ed817e2d7b",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/terminal/interface.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/terminal/subprocess_terminal.py",
+      "sha256": "b113a314bb33f3a89d25615e5fb4cfd9f51f6a6e8096bcb4a4cf58c7f05e22d7",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/terminal/subprocess_terminal.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/terminal/terminal_session.py",
+      "sha256": "8eb9dc1dac48bf4e76f564bb0edd46bb966d5334b2d872a3e90a332d4710b5f8",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/terminal/terminal_session.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/terminal/tmux_pane_pool.py",
+      "sha256": "52e2ba4aa93a5f6ce062686708d07278cce545e69fb1c388ad2367da43df89de",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/terminal/tmux_pane_pool.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/terminal/tmux_terminal.py",
+      "sha256": "5e7e2f32a0b477fd871a764a00d807eb5b998f5c7856e74baf87ab83dc17aa73",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/terminal/tmux_terminal.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/terminal/windows_terminal.py",
+      "sha256": "fd86ff02e8bdfd460eee11142ac20cd38b72d379deb8af874aaa8380997d146e",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/terminal/windows_terminal.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/timeout_policy.py",
+      "sha256": "6dc79814a63cfb3a117e7970fe31aa6096cf51058776b88299427540953c7250",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/timeout_policy.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/utils/__init__.py",
+      "sha256": "4587dfb2fe45f1bf52194d1f1ddce7a7b5da1743b71321ff7feb41c4cc001541",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/utils/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/utils/command.py",
+      "sha256": "06a884267b7e15f7b9447dba22b17750e5be754efd74d30805e493470c6f3fb9",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/utils/command.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/terminal/utils/escape_filter.py",
+      "sha256": "8ba5e11bfdb879af03efe7c7f8b5319c7a6b6fefa740c20ca389ac4313d0742f",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/terminal/utils/escape_filter.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/tom_consult/__init__.py",
+      "sha256": "6aff556094561e63f8ff912edbce343c046d80e4d13fce23663a89df3b3cb11b",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/tom_consult/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/tom_consult/definition.py",
+      "sha256": "a7d2ca425f10c0259c0ce20f692b96673ee5fe7eb09b96d150e01a4dc365842d",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/tom_consult/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/tom_consult/executor.py",
+      "sha256": "2e459e96d8feed980b85564a64fe1cba1c6a83662ec919ea4b3e52d14f561259",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/tom_consult/executor.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/utils/__init__.py",
+      "sha256": "f7cda98c0cdc71fce0b2902cbca7b488ade22ef0088a699dec0ab38c271cd9de",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/utils/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/utils/timeout.py",
+      "sha256": "02328d2d96bc36a4341e5959cea599c19323fbc3c45871c15f03a53234f28290",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/utils/timeout.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/workflow/__init__.py",
+      "sha256": "ed41388325ffa11ed0cc210844a9408f735642b839146abd118b0b6901aeaf77",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/workflow/__init__.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/workflow/definition.py",
+      "sha256": "13c79e7f0e0781b8e9b79fbbd17da72db17071c0e5ae2b810e3311059b76b4c0",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/workflow/definition.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/openhands/tools/workflow/impl.py",
+      "sha256": "91d064024e47c50d35f311b8a2bcd77028ebb52e986d33ae09fec137f7655bf7",
+      "source": "repogeneration/vendor/openhands-tools/openhands/tools/workflow/impl.py",
+      "status": "exact_copy"
+    },
+    {
+      "path": "vendor/openhands-tools/pyproject.toml",
+      "sha256": "5206ef6f1684a70f71637de322ada4df8ccdc1e8e61375de302efc5beb0b9c05",
+      "source": "repogeneration/vendor/openhands-tools/pyproject.toml",
+      "status": "exact_copy"
+    },
+    {
+      "path": "data/task.json",
+      "sha256": "51e838cba70dcec266f00798c33a9fda81632fe547bd4052ccbe7d57d4080b95",
+      "source": "data/eval100_20260911/tasks/deckhouse__lib-python--t16--l341--a121e758.json",
+      "status": "exact_copy"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "dbf186d42b5b6b8f07ebbed3d2452fd9153796f34247f10640b7d2008d94d7aa",
+      "status": "new_local_glue_or_documentation"
+    },
+    {
+      "path": "data/LICENSE.deckhouse",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "status": "third_party_license",
+      "source_url": "https://github.com/deckhouse/lib-python/blob/a121e758848387c339553309ab08fcf73bd646cb/LICENSE"
+    }
+  ]
+}
