@@ -1,4 +1,4 @@
-# AutoNL2Repo Local
+# NL2Repo-Evaluate
 
 Single-task local rollout and evaluation, copied and reduced from our
 `AutoNL2Repo-Eval/repogeneration` runner. All required project code is included
@@ -30,8 +30,8 @@ Default per-container limits are 8 GiB RAM / 4 CPUs. Allow enough disk space for
 the development image, the task's scoring image and outputs (often tens of GB).
 
 ```bash
-git clone https://github.com/alickzhu/AutoNL2Repo-Local.git
-cd AutoNL2Repo-Local
+git clone https://github.com/alickzhu/NL2Repo-Evaluate.git
+cd NL2Repo-Evaluate
 bash setup.sh
 ```
 
@@ -247,7 +247,7 @@ this README.
 From a copy of this standalone directory:
 
 ```bash
-cd AutoNL2Repo-Local
+cd NL2Repo-Evaluate
 bash setup.sh
 
 # This localhost URL applies if your Copilot API is already listening on 4141.
