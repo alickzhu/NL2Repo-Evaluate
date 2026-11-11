@@ -50,6 +50,26 @@ machine has both, pass `--docker /usr/bin/docker`. Docker CLI and docker-py must
 address the same daemon; Docker CLI-only remote contexts are not sufficient.
 Do not expose the Docker socket to the coding Agent.
 
+## Generate from a static Spec
+
+Static Spec JSONs contain a `document` and package identity but may have no
+scoring image or frozen tests. Use the separate generation command for these:
+
+```bash
+.venv/bin/autonl2repo generate \
+  --task data/static_spec.json --api-mode responses \
+  --base-url "$OPENAI_BASE_URL" --model "$OPENAI_MODEL" \
+  --run-id static-example --generation-timeout 2400
+```
+
+Set `OPENAI_API_KEY` in your environment when the endpoint requires it. The
+Agent receives the original document unchanged, works in the same isolated
+development container, and produces `workspace.tar`, `submission.tar`, model
+traces, and a generation result. No scoring image is prepared or evaluator
+invoked. The result records `evaluation_status=not_run` and `score=null`;
+successful generation does not establish conformance to the original tests.
+`rollout` and `evaluate` retain their complete-task validation requirements.
+
 ## Automatic generation-to-evaluation workflow
 
 **Yes: `autonl2repo rollout` automatically generates and evaluates in one

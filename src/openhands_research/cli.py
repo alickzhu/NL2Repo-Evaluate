@@ -10,7 +10,7 @@ from urllib.parse import urlsplit
 
 from .benchmarks.current_autonl2repo import evaluator_identity
 from .ledger import atomic_json, _identifier
-from .local import check_docker, load_one, rollout
+from .local import check_docker, load_one, load_spec_one, rollout, generate
 from .model_profile import ModelProfile, MODEL_REVISIONS, QWEN38_FLASH_NEXT_MODEL, GLM52_FP8_MODEL
 from .runner import AGENT_ENVIRONMENT_PROTOCOL, NL2REPO_SOLVER_IMAGE, RunnerConfig
 
@@ -45,6 +45,8 @@ def build_parser():
     run.add_argument("--reasoning-effort", default="high")
     run.add_argument("--request-timeout", type=int, default=7200)
     run.add_argument("--dry-run", action="store_true", help="Validate inputs without Docker or model calls")
+    commands.add_parser("generate", parents=[run], add_help=False,
+                        help="Generate from a static Spec JSON without scoring")
     score = commands.add_parser("evaluate", help="Score one existing implementation directory")
     score.add_argument("--task", type=Path, required=True)
     score.add_argument("--submission", type=Path, required=True)
@@ -85,7 +87,8 @@ def main():
     parser = build_parser()
     args = parser.parse_args()
     try:
-        task = load_one(args.task)
+        task = (load_spec_one(args.task, args.solver_image)
+                if args.command == "generate" else load_one(args.task))
         if args.command == "evaluate":
             if not args.submission.is_dir() or args.timeout <= 0:
                 raise ValueError("Provide an existing implementation directory and positive timeout")
@@ -115,7 +118,8 @@ def main():
             print(json.dumps({"task_id": task.public.task_id, "evaluator": evaluator_identity(),
                               "profile": profile.public_dict(), "runner": asdict(config)}, default=str, indent=2))
             return
-        result = rollout(task, config, profile, api_key=os.getenv("OPENAI_API_KEY", "not-needed"),
+        execute = generate if args.command == "generate" else rollout
+        result = execute(task, config, profile, api_key=os.getenv("OPENAI_API_KEY", "not-needed"),
                          docker_executable=args.docker)
         print(json.dumps(result, indent=2))
         raise SystemExit(0 if result.get("outcome") == "completed" else 2)

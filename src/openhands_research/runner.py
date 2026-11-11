@@ -51,6 +51,7 @@ NL2REPO_SOLVER_IMAGE = (
     "sha256:2bc76406cf6a7ac351c0f96de3bc37fe1c4950d283b29cc302cfabf845416488"
 )
 AGENT_ENVIRONMENT_PROTOCOL = "agent-environment-directory-v1"
+SPEC_ONLY_CONTRACT = "autonl2repo-spec-only-generation-v1"
 
 
 @dataclass(frozen=True)
@@ -453,22 +454,24 @@ class AttemptRunner:
         self, task: DatasetTask, attempt_index: int = 0, *, defer_grading: bool = False
     ) -> dict[str, Any]:
         current = task.private.payload.get("evaluation_contract") == CURRENT_CONTRACT
-        if not current:
+        spec_only = (task.private.kind == "spec_only" and
+                     task.private.payload.get("evaluation_contract") == SPEC_ONLY_CONTRACT)
+        if not current and not spec_only:
             raise ValueError("Only the current AutoNL2Repo evaluation contract is supported")
-        if current != (self.config.network_policy == POLICY):
+        if (current or spec_only) != (self.config.network_policy == POLICY):
             raise ValueError(
                 "current AutoNL2Repo generation requires legacy_blocklist; "
                 "historical upstream adapters retain offline_broker"
             )
         if (
-            task.private.payload.get("evaluation_contract") == CURRENT_CONTRACT
+            (current or spec_only)
             and not defer_grading
         ):
             raise ValueError("Use the local sequential rollout entry point")
         if defer_grading and (
             self.config.collection_protocol == "legacy"
             or task.private.payload.get("evaluation_contract")
-            != CURRENT_CONTRACT
+            not in {CURRENT_CONTRACT, SPEC_ONLY_CONTRACT}
         ):
             raise ValueError(
                 "independent grading requires a directory collection protocol"
@@ -501,7 +504,7 @@ class AttemptRunner:
                     ],
                     grading_network="none",
                 )
-                if current
+                if current or spec_only
                 else None
             )
             if guard is not None and guard.identity != self.blocklist_identity:
@@ -650,7 +653,7 @@ class AttemptRunner:
                     events=recorder.count,
                 )
                 directory = task.private.payload.get("evaluation_contract") in {
-                    CURRENT_CONTRACT,
+                    CURRENT_CONTRACT, SPEC_ONLY_CONTRACT,
                 }
                 raw_archive = (
                     target.capture(task.public.workdir, directory=True)
@@ -708,6 +711,19 @@ class AttemptRunner:
                         {"schema_version": 1, "diagnostics": cleanup_diagnostics},
                     )
                 atomic_json(paths.root / "generation.json", generation)
+                if spec_only:
+                    outcome = ("timeout" if timed_out else "completed"
+                               if execution_status == "finished" and not generation_error else "failed")
+                    result = {"generation_ready": True, "outcome": outcome,
+                              "task_id": task.public.task_id, "task_key": task.stable_key,
+                              "attempt_index": attempt_index, "evaluation_status": "not_run",
+                              "scoring_valid": None, "score": None,
+                              "reason": "spec_only_generation; no frozen scoring material",
+                              "artifact_directory": str(paths.root)}
+                    atomic_json(paths.root / "result.json", result)
+                    append_jsonl(paths.run_root / "results.jsonl", result)
+                    self.ledger.transition(paths, "generation_" + outcome)
+                    return result
                 self.ledger.transition(paths, "awaiting_scoring")
                 return {
                     "generation_ready": True,
@@ -771,6 +787,8 @@ class AttemptRunner:
     def grade_generated(
         self, task: DatasetTask, attempt_index: int, image_identity: dict[str, str]
     ) -> dict[str, Any]:
+        if task.private.kind == "spec_only":
+            raise ValueError("spec_only generation has no evaluator or scoring materials")
         if self.config.collection_protocol == "legacy":
             raise ValueError("independent grading requires a directory protocol")
         paths = AttemptPaths(

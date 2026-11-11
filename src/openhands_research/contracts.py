@@ -196,7 +196,7 @@ class PrivateEvalSpec:
     Setup commands run only in the private grading environment, not the solver.
     """
 
-    kind: Literal["nl2repo", "command", "denovoswe", "autonl2repo"]
+    kind: Literal["nl2repo", "command", "denovoswe", "autonl2repo", "spec_only"]
     test_case_count: int
     test_commands: tuple[str, ...]
     test_files: tuple[str, ...]
@@ -208,6 +208,15 @@ class PrivateEvalSpec:
     payload: dict[str, Any] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
+        if self.kind == "spec_only":
+            if (type(self.test_case_count) is not int or self.test_case_count != 0
+                    or self.test_commands or self.test_files or self.setup_commands
+                    or self.expected_exit_codes or self.score_rule is not None):
+                raise ValueError("spec_only cannot contain scoring tests or a score rule")
+            if not isinstance(self.payload, dict):
+                raise ValueError("private payload must be a JSON object")
+            object.__setattr__(self, "payload", json_value(self.payload))
+            return
         if self.kind not in {"nl2repo", "command", "denovoswe", "autonl2repo"}:
             raise ValueError(f"unsupported evaluator kind: {self.kind!r}")
         if type(self.test_case_count) is not int or self.test_case_count <= 0:
@@ -308,10 +317,10 @@ class DatasetTask:
                 "environment",
                 EnvironmentSpec(
                     solver_image="generic"
-                    if self.private.kind in {"nl2repo", "autonl2repo"}
+                    if self.private.kind in {"nl2repo", "autonl2repo", "spec_only"}
                     else "task",
                     grader_dependencies=self.private.kind
-                    not in {"denovoswe", "autonl2repo"},
+                    not in {"denovoswe", "autonl2repo", "spec_only"},
                     reuse_solver_wheels=self.private.kind == "denovoswe",
                 ),
             )

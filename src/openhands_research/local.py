@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import os
 from pathlib import Path
 import shutil
@@ -13,6 +14,46 @@ from .benchmarks.current_autonl2repo import load_current
 from .ledger import atomic_json
 from .runner import AttemptRunner
 from .preparation import prepare_generic_image, prepare_grading_image
+from .runner import SPEC_ONLY_CONTRACT
+from .contracts import DatasetTask, PublicTaskSpec, PrivateEvalSpec
+from .benchmarks.current_autonl2repo import _object, _blocked_names
+
+
+def load_spec_one(path: Path, solver_image: str):
+    """Load a static delivery without inventing an image, test set or score."""
+    if path.is_symlink() or not path.is_file() or path.suffix != ".json":
+        raise ValueError("--task must be one non-symlink task .json file")
+    raw = path.read_bytes()
+    row = json.loads(raw, object_pairs_hook=_object)
+    if not isinstance(row, dict) or not isinstance(row.get("document"), str) or not row["document"].strip():
+        raise ValueError("task document is required")
+    digest = hashlib.sha256(raw).hexdigest()
+    return DatasetTask(
+        PublicTaskSpec(dataset_id="autonl2repo-spec-only", dataset_revision=digest,
+                       task_id=row["instance_id"], prompt=row["document"], image=solver_image,
+                       metadata={"source_sha256": digest, "blocked_packages": _blocked_names(row)}),
+        PrivateEvalSpec(kind="spec_only", test_case_count=0, test_commands=(), test_files=(),
+                        payload={"task": row, "evaluation_contract": SPEC_ONLY_CONTRACT,
+                                 "source_sha256": digest}),
+    )
+
+
+def generate(task, config, profile, *, api_key, docker_executable="docker"):
+    """Generate and capture from a Spec; never prepare or invoke scoring."""
+    if task.private.kind != "spec_only":
+        raise ValueError("generate requires a spec_only task")
+    runtime = check_docker(docker_executable)
+    os.environ["AUTONL2REPO_DOCKER"] = runtime["cli"]
+    root = config.output_root / config.run_id
+    root.parent.mkdir(parents=True, exist_ok=True)
+    root.mkdir(mode=0o700)
+    atomic_json(root / "local_runtime.json", {**runtime, "mode": "generation_only"})
+    runner = AttemptRunner(config, profile, api_key=api_key)
+    try:
+        prepare_generic_image(config.solver_image)
+    except Exception as error:
+        return runner.preparation_failed(task, 0, error)
+    return runner.run(task, 0, defer_grading=True)
 
 
 def load_one(path: Path):
